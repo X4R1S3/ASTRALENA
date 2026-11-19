@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# WhatsApp session/auth state — losing these forces a re-pair; leaking them
+# is equivalent to leaking the account's login.
+session/
+*.session
+
+# Runtime-generated persistent state (message cache, per-feature JSON
+# stores, media pulled down for anti-delete, plugin cache, etc.)
+database/*.json
+!database/.gitkeep
+database/media-store/
+plugins/*
+# The bundled auto-leave plugin ships with the repo; installed plugins stay ignored.
+!plugins/autoleave.js
+!plugins/qr-tools.js
+
+# Secrets / environment
+.env
+.env.*
+!.env.example
+config.env
+config.local.json
+
+# Other auth/session locations a host or fork might use
+sessions/
+auth_info*/
+*.sqlite
+*.db
+.astralena.lock
+
+# Logs / PM2
+*.log
+.pm2/
+npm-debug.log*
+logs/
+
+# Temp / cache directories created at runtime
+temp/
+tmp/
+.cache/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,8 +1,7 @@
 <div align="center">
 
 <img src="./assets/astralena-earth-orbit.jpg" width="100%" alt="Space shuttle above Earth's atmosphere" />
-<img src="./assets/rolling-circle.svg" width="90" alt="ASTRALENA AI rolling circle" />
-# ASTRALENA AI
+<h1 align="center">ASTRALENA AI</h1>
 
 ### Space-inspired automation for safer, smarter WhatsApp communities
 
@@ -10,6 +9,8 @@
 [![Node.js](https://img.shields.io/badge/node-%3E%3D22-7CFFB2?style=for-the-badge&logo=node.js&logoColor=white&labelColor=07111F)](https://nodejs.org/)
 [![Baileys fork](https://img.shields.io/badge/Baileys-X4R1S3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=07111F)](https://github.com/X4R1S3/baileys)
 [![License](https://img.shields.io/badge/license-MIT-B88CFF?style=for-the-badge&labelColor=07111F)](LICENSE)
+<br />
+<img src="./assets/rolling-circle.svg" width="90" alt="ASTRALENA AI rolling circle" />
 
 **Protect the conversation. Automate the ordinary. Expand what your community can do.**
 
@@ -257,5 +258,7 @@ Your star helps the project reach more builders. Your fork is an invitation to e
 **ASTRALENA AI — intelligent automation for modern communities.**
 
 [![Back to mission control](https://img.shields.io/badge/Back%20to%20mission%20control-Open-00FFF0?style=for-the-badge&labelColor=07111F)](#mission-control) · [![View the repository](https://img.shields.io/badge/View%20the%20repository-Open-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/X4R1S3/ASTRALENA)
+
+<img src="./assets/astralena-shuttle-line.svg" width="100%" alt="Looping shuttle with blue exhaust over ASTRALENA AI" />
 
 </div>

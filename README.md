@@ -283,20 +283,6 @@ npm run start:plain
 
 New commands should follow the existing category layout under `commands/`. Keep secrets out of source control, add focused tests where behavior changes, and run the relevant checks before opening a pull request.
 
-## Project layout
-
-```text
-ASTRALENA/
-├── commands/       Command families grouped by capability
-├── lib/            Runtime services, stores, AI, connection, and orchestration
-├── library/        Shared media and metadata helpers
-├── plugins/        Optional extension modules
-├── tests/          Runtime, feature, and subsystem tests
-├── assets/         Visual assets and word-chain resources
-├── config.json     Project configuration template and defaults
-├── ecosystem.config.js
-└── index.js        Application entry point
-```
 
 ## Safety and responsible use
 
@@ -333,9 +319,15 @@ No automated system can guarantee that every malicious or unwanted message will 
 
 <div align="center">
 
-### ASTRALENA AI
+## Thank you for visiting ASTRALENA
 
-**Intelligent automation for modern communities.**
+Thank you for visiting my repository and reading this README. If ASTRALENA helps, inspires, or gives you an idea to build on, please **star the repository** and **fork it** so you can explore, improve, and create your own mission.
+
+Your star helps the project reach more builders. Your fork is an invitation to experiment.
+
+<img src="./assets/astralena-orbit-astronaut.gif" alt="Astronaut standing on the moon while a shuttle loops around a glowing orbit" width="100%" />
+
+**ASTRALENA AI — intelligent automation for modern communities.**
 
 [Back to mission control](#mission-control) · [View the repository](https://github.com/X4R1S3/ASTRALENA)
 

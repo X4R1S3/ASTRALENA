@@ -2,6 +2,8 @@
 
 <img src="./assets/astralena-space-banner.jpg" alt="ASTRALENA space technology banner" width="100%" />
 
+<img src="./assets/astralena-orbit-astronaut.gif" width="720" alt="Astronaut floating around Earth while a shuttle loops around the orbit" />
+
 # ASTRALENA AI
 
 ### Space-inspired automation for safer, smarter WhatsApp communities
@@ -12,8 +14,6 @@
 [![License](https://img.shields.io/badge/license-MIT-B88CFF?style=for-the-badge&labelColor=07111F)](LICENSE)
 
 **Protect the conversation. Automate the ordinary. Expand what your community can do.**
-
-[Explore the system](#mission-control) · [Deploy](#deployment-runbooks) · [Configure](#configuration) · [Connect WhatsApp](#connect-whatsapp) · [Support](#community-and-support)
 
 </div>
 

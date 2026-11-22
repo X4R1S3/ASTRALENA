@@ -9,6 +9,7 @@
 [![Node.js](https://img.shields.io/badge/node-%3E%3D22-7CFFB2?style=for-the-badge&logo=node.js&logoColor=white&labelColor=07111F)](https://nodejs.org/)
 [![Baileys fork](https://img.shields.io/badge/Baileys-X4R1S3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=07111F)](https://github.com/X4R1S3/baileys)
 [![License](https://img.shields.io/badge/license-MIT-B88CFF?style=for-the-badge&labelColor=07111F)](LICENSE)
+[![Developer @X4R1S3](https://img.shields.io/badge/Developer-%40X4R1S3-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=07111F)](https://t.me/X4R1S3)
 <br />
 <img src="./assets/rolling-circle.svg" width="90" alt="ASTRALENA AI rolling circle" />
 

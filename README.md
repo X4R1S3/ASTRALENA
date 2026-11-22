@@ -1,9 +1,8 @@
 <div align="center">
 
 <img src="./assets/astralena-space-banner.jpg" alt="ASTRALENA space technology banner" width="100%" />
-
 <img src="./assets/rolling-circle.svg" width="360" alt="Astronaut drifting around Earth in a looping space circle" />
-
+<img src="./assets/astralena-earth-orbit.jpg" width="100%" alt="Space shuttle above Earth's atmosphere" />
 # ASTRALENA AI
 
 ### Space-inspired automation for safer, smarter WhatsApp communities
@@ -51,50 +50,6 @@ ASTRALENA is organized like a small operations platform rather than a single-pur
 | **Developer bay** | Repository tools, code helpers, package utilities, file conversion, web capture, OCR, and automation helpers. |
 | **Media lab** | Image effects, stickers, audio, video, documents, thumbnails, and format conversion. |
 | **Operations core** | Session handling, process locks, health monitoring, scheduled work, stores, caching, and controlled restarts. |
-
-## Command families
-
-The command library is grouped by operational purpose so contributors can find the right extension point quickly.
-
-| Family | Examples |
-|---|---|
-| `admin` | Moderation, anti-abuse, group rules, logs, and member control |
-| `ai` | Claude, DeepSeek, Gemini, GPT, Grok, Kimi, Llama, Mistral, OpenAI, Qwen |
-| `bot` | Reactions, responders, variables, reloads, sudo, and bot controls |
-| `business` | Catalogues, labels, payments, and business profile tools |
-| `document` | PDF, DOCX, XLSX, CSV, HTML, XML, OCR, VCF, ZIP, and tables |
-| `downloader` | YouTube, TikTok, Instagram, Spotify, Twitter/X, Facebook, and more |
-| `economy` | Banking, shops, jobs, crime, travel, pets, games, and rewards |
-| `fun` and `games` | Jokes, quotes, trivia, word games, arcade games, and social commands |
-| `group` | Group setup, approvals, invites, polls, tagging, and member utilities |
-| `image` and `media` | Graphics, effects, stickers, audio, video, and conversions |
-| `owner` | Configuration, keys, maintenance, deployment, sessions, and lifecycle control |
-| `search` and `tools` | Anime, weather, calculators, translation, hashing, encoding, and utilities |
-
-## Architecture at a glance
-
-```text
-WhatsApp account
-      |
-      v
-X4R1S3 Baileys transport
-      |
-      v
-Connection + session + health layer
-      |
-      v
-Message handler and command router
-      |
-      +--> Community shield
-      +--> AI deck
-      +--> Media lab
-      +--> Developer bay
-      +--> Games and economy
-      +--> Plugin commands
-      |
-      v
-Persistent stores, schedulers, caches, and controlled process lifecycle
-```
 
 ## Requirements
 

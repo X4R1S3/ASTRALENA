@@ -2,7 +2,7 @@
 
 <img src="./assets/astralena-space-banner.jpg" alt="ASTRALENA space technology banner" width="100%" />
 
-<img src="./assets/astralena-orbit-astronaut.gif" width="720" alt="Astronaut floating around Earth while a shuttle loops around the orbit" />
+<img src="./assets/rolling-circle.svg" width="360" alt="Astronaut drifting around Earth in a looping space circle" />
 
 # ASTRALENA AI
 

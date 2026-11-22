@@ -1,190 +1,214 @@
 <div align="center">
 
-# ◈ ASTRALENA AI
+<img src="./assets/astralena-space-banner.jpg" alt="ASTRALENA space technology banner" width="100%" />
 
-### **The intelligent security and productivity layer for WhatsApp.**
+# ASTRALENA AI
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=22&pause=1200&color=00FFF0&center=true&vCenter=true&width=900&height=70&repeat=true&lines=SECURE+YOUR+COMMUNITIES.;AUTOMATE+THE+ORDINARY.;BUILD+WITH+INTELLIGENCE.;YOUR+GROUPS%2C+PROTECTED+BY+DESIGN." alt="ASTRALENA AI animated tagline" />
+### Space-inspired automation for safer, smarter WhatsApp communities
 
-<img src="https://i.imgur.com/dBaSKWF.gif" height="16" width="88%" alt="divider" />
+[![Version](https://img.shields.io/badge/version-3.0.0-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/X4R1S3/ASTRALENA)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D22-7CFFB2?style=for-the-badge&logo=node.js&logoColor=white&labelColor=07111F)](https://nodejs.org/)
+[![Baileys fork](https://img.shields.io/badge/Baileys-X4R1S3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=07111F)](https://github.com/X4R1S3/baileys)
+[![License](https://img.shields.io/badge/license-MIT-B88CFF?style=for-the-badge&labelColor=07111F)](LICENSE)
 
-<img src="./assets/rolling-circle.svg" width="90" alt="ASTRALENA AI rolling circle" />
+**Protect the conversation. Automate the ordinary. Expand what your community can do.**
 
-[![Version](https://img.shields.io/badge/version-3.0.0-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/CEO-ASTRALENA/ASTRALENA-AI)
-[![Developer ASTRALENA](https://img.shields.io/badge/Developer-ASTRALENA-B88CFF?style=for-the-badge&logo=telegram&labelColor=07111F)](https://t.me/astralenaverified)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D20-7CFFB2?style=for-the-badge&logo=node.js&logoColor=white&labelColor=07111F)](https://nodejs.org/)
-[![Powered by astralenaverified/baileys](https://img.shields.io/badge/powered%20by-astralenaverified%2Fbaileys-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=07111F)](https://github.com/WhiskeySockets/Baileys)
-[![License](https://img.shields.io/badge/license-open%20source-B88CFF?style=for-the-badge&labelColor=07111F)](LICENSE)
+[Explore the system](#mission-control) · [Deploy](#deployment-runbooks) · [Configure](#configuration) · [Connect WhatsApp](#connect-whatsapp) · [Support](#community-and-support)
 
 </div>
 
 ---
 
-## A more intelligent way to run your groups
+## Mission control
 
-**ASTRALENA AI** is a multifunctional WhatsApp automation platform built for safer communities, faster workflows, and more capable users. It combines proactive group protection, intelligent automation, developer utilities, and an always-available AI assistant in one extensible system.
+ASTRALENA AI is a self-hosted WhatsApp automation platform built for communities, creators, developers, and teams that need more control with less operational noise.
 
-Whether you manage a busy community, build digital products, or simply want a smarter everyday assistant, ASTRALENA AI helps you reduce noise, respond faster, and keep your conversations more secure.
+It combines group protection, intelligent automation, developer tooling, media utilities, productivity commands, games, economy systems, and AI assistance inside one extensible command platform.
 
-> **One platform. Three priorities:** protect your conversations, accelerate your work, and make everyday tasks simpler.
+> **Design principle:** keep communities safer, make repetitive work smaller, and put useful intelligence where conversations already happen.
 
-> **Project notice:** ASTRALENA AI was built by **Astralena** and is developed and maintained under the **ASTRALENAVERIFIED** organization.
+### Project identity
 
----
+| Area | Detail |
+|---|---|
+| Project | ASTRALENA AI v3.0.0 |
+| Focus | WhatsApp automation, community operations, AI, productivity, and media tooling |
+| Runtime | Node.js 22 or newer |
+| Process model | PM2-ready with health endpoints |
+| Primary repository | [X4R1S3/ASTRALENA](https://github.com/X4R1S3/ASTRALENA) |
+| Core messaging layer | [X4R1S3/baileys](https://github.com/X4R1S3/baileys) |
+| License | MIT |
 
-## At a glance
+## System map
 
-Use this quick map to jump directly to any part of the project:
+ASTRALENA is organized like a small operations platform rather than a single-purpose bot.
 
-1. [A more intelligent way to run your groups](#a-more-intelligent-way-to-run-your-groups)
-2. [Core capabilities](#core-capabilities)
-   - [Intelligent group protection](#-intelligent-group-protection)
-   - [Smart automation](#-smart-automation)
-   - [AI assistant for everyday tasks](#-ai-assistant-for-everyday-tasks)
-   - [Developer workspace](#-developer-workspace)
-   - [Community operations](#-community-operations)
-3. [Why ASTRALENA AI?](#why-astralena-ai)
-4. [Technology](#technology)
-5. [Requirements](#requirements)
-6. [Deploy ASTRALENA AI](#deploy-astralena-ai)
-   - [Deploy on Render](#deploy-on-render)
-   - [Deploy on a VPS](#deploy-on-a-vps)
-   - [Deploy on Heroku](#deploy-on-heroku)
-   - [Deploy on a hosting panel](#deploy-on-a-hosting-panel)
-   - [Deploy on Termux](#deploy-on-termux)
-7. [Connect your WhatsApp account](#connect-your-whatsapp-account)
-8. [Optional developer integrations](#optional-developer-integrations)
-9. [Community and support](#community-and-support)
-10. [Project disclaimer](#project-disclaimer)
-
----
+| Module | What it does |
+|---|---|
+| **Community shield** | Moderation, anti-spam, anti-link, anti-raid, anti-scam, permissions, warnings, and group controls. |
+| **AI deck** | Chatbot workflows, model integrations, voice, media understanding, and practical assistance. |
+| **Command library** | Admin, group, owner, downloader, media, document, search, fun, games, economy, and utility commands. |
+| **Developer bay** | Repository tools, code helpers, package utilities, file conversion, web capture, OCR, and automation helpers. |
+| **Media lab** | Image effects, stickers, audio, video, documents, thumbnails, and format conversion. |
+| **Operations core** | Session handling, process locks, health monitoring, scheduled work, stores, caching, and controlled restarts. |
 
 ## Core capabilities
 
-### 🛡️ Intelligent group protection
+### Community protection
 
-ASTRALENA AI is designed to help protect group chats from common digital threats. It can help identify suspicious links, phishing attempts, automated billing messages, spam patterns, and other unwanted activity before they overwhelm your community.
+- Anti-link, anti-spam, anti-bot, anti-scam, anti-raid, anti-delete, anti-forwarding, and anti-fake controls.
+- Group permissions, warnings, moderation logs, member tools, tag utilities, approvals, and invite management.
+- Configurable newcomer, poll, sticker, location, contact, document, audio, video, and event policies.
 
-Use configurable moderation tools to reduce message noise, enforce group rules, and give administrators greater visibility over what enters the conversation. Protection behaviour can be adapted to the needs of each group.
+### AI and productivity
 
-### ⚡ Smart automation
+- Chatbot and intent workflows for practical everyday assistance.
+- Multiple AI provider integrations through configurable keys.
+- Translation, summaries, writing help, coding support, OCR, document generation, image understanding, and voice workflows.
+- Notes, reminders, schedules, link utilities, calculators, encoding tools, weather, location, and information commands.
 
-Automate routine actions without turning your community into a complicated control panel. ASTRALENA AI can help with welcome messages, group information, moderation responses, reminders, utilities, and other repeatable workflows.
+### Media and developer tooling
 
-Its plugin-driven architecture makes it possible to extend the bot with new commands and integrations as your needs evolve.
+- Social-media and short-drama download commands through the integrated `social-dl` ecosystem.
+- Image effects, stickers, thumbnails, audio extraction, video conversion, TTS, screenshots, PDFs, spreadsheets, documents, archives, and QR utilities.
+- GitHub repository operations, package inspection, code formatting helpers, web capture, and developer-oriented commands.
 
-### 🧠 AI assistant for everyday tasks
+### Community experience
 
-The built-in AI assistant helps users with daily basics and practical requests. Ask for explanations, summaries, ideas, translations, writing assistance, planning help, or quick answers directly inside WhatsApp.
+- Games, economy systems, profiles, leaderboards, rewards, challenges, and interactive group utilities.
+- Greeting cards, welcome and goodbye flows, group status tools, auto reactions, presence controls, and configurable responders.
+- Plugin-oriented command folders make it possible to extend the system without reshaping the entire runtime.
 
-ASTRALENA AI is built to make useful intelligence available where conversations already happen—without requiring users to switch between multiple tools for every small task.
+## Command families
 
-### 🧰 Developer workspace
+The command library is grouped by operational purpose so contributors can find the right extension point quickly.
 
-ASTRALENA AI also provides a growing collection of tools for developers and technical teams. Use it to support coding workflows, generate or refine ideas, inspect technical information, work with repositories, and automate repetitive project tasks.
-
-The platform is designed for experimentation and extension, so developers can build their own commands, services, and productivity modules on top of the core system.
-
-### 📡 Community operations
-
-Give group owners and administrators a clearer way to manage their spaces. Configure permissions, moderation behaviour, automated notices, administrative utilities, and community-specific commands from a single platform.
-
-The result is a more organised, responsive, and dependable group experience.
-
----
-
-## Why ASTRALENA AI?
-
-| Capability | What it provides |
+| Family | Examples |
 |---|---|
-| **Security-first automation** | Tools designed to reduce phishing, spam, suspicious links, and automated bill-message noise. |
-| **Practical intelligence** | An AI assistant for everyday questions, writing, summaries, planning, and explanations. |
-| **Developer-friendly design** | An extensible command and plugin system for technical workflows and custom features. |
-| **Community control** | Flexible group-management utilities for owners, moderators, and administrators. |
-| **Always available** | Deploy on your preferred host and keep your assistant available around the clock. |
-| **Built to evolve** | A modular foundation that can grow with new tools, integrations, and use cases. |
+| `admin` | Moderation, anti-abuse, group rules, logs, and member control |
+| `ai` | Claude, DeepSeek, Gemini, GPT, Grok, Kimi, Llama, Mistral, OpenAI, Qwen |
+| `bot` | Reactions, responders, variables, reloads, sudo, and bot controls |
+| `business` | Catalogues, labels, payments, and business profile tools |
+| `document` | PDF, DOCX, XLSX, CSV, HTML, XML, OCR, VCF, ZIP, and tables |
+| `downloader` | YouTube, TikTok, Instagram, Spotify, Twitter/X, Facebook, and more |
+| `economy` | Banking, shops, jobs, crime, travel, pets, games, and rewards |
+| `fun` and `games` | Jokes, quotes, trivia, word games, arcade games, and social commands |
+| `group` | Group setup, approvals, invites, polls, tagging, and member utilities |
+| `image` and `media` | Graphics, effects, stickers, audio, video, and conversions |
+| `owner` | Configuration, keys, maintenance, deployment, sessions, and lifecycle control |
+| `search` and `tools` | Anime, weather, calculators, translation, hashing, encoding, and utilities |
 
----
+## Architecture at a glance
 
-## Technology
-
-ASTRALENA AI runs on **Node.js** and a hardened Baileys fork, with a modular command engine and plugin-oriented architecture. It operates through a WhatsApp account and can be hosted on a VPS, hosting panel, cloud service, or compatible mobile environment.
-
-> ASTRALENA AI is a self-hosted automation project. Review your hosting provider's terms, WhatsApp's policies, and the permissions granted to every integration before deploying it in a production community.
-
----
+```text
+WhatsApp account
+      |
+      v
+X4R1S3 Baileys transport
+      |
+      v
+Connection + session + health layer
+      |
+      v
+Message handler and command router
+      |
+      +--> Community shield
+      +--> AI deck
+      +--> Media lab
+      +--> Developer bay
+      +--> Games and economy
+      +--> Plugin commands
+      |
+      v
+Persistent stores, schedulers, caches, and controlled process lifecycle
+```
 
 ## Requirements
 
-- **Node.js** version 20 or higher
-- **npm** and **pnpm**
-- **FFmpeg**, bundled through `ffmpeg-static`
-- A WhatsApp account for the self-hosted bot
-- A VPS or hosting panel for reliable 24/7 availability
-- The project-specific `@astralenaverified/baileys` dependency
+- Node.js **22 or newer**.
+- npm and pnpm.
+- A WhatsApp account for the self-hosted bot.
+- A private session ID or pairing flow.
+- FFmpeg support through the project dependencies.
+- A VPS, cloud host, Render service, hosting panel, or Android/Termux environment for long-running use.
 
----
-
-## Deploy ASTRALENA AI
-
-### Deploy on Render
-
-1. Fork this repository to your GitHub account.
-2. In [Render](https://render.com), create a **New → Web Service** and connect your fork.
-3. Use the following commands:
-
-   ```text
-   Build Command: pnpm install
-   Start Command: npm start
-   ```
-
-4. Deploy once so Render provides a live service URL.
-5. Generate a session ID from the [pairing site](https://astralena-ai.site/session) and add it as a private `SESSION_ID` environment variable in Render (avoid committing it in `config.json`), then redeploy. Set the health check path to `/live`.
-
-Render's free tier may sleep after inactivity. For consistent 24/7 availability, use a suitable paid instance or another host that supports persistent services.
-
-### Deploy on a VPS
+## Quick start
 
 ```bash
-# Install prerequisites
-sudo apt update && sudo apt install -y nodejs npm git
-sudo npm install -g pnpm
-
-# Clone the repository
-git clone https://github.com/astralenaverified/ASTRALENA-AI.git astralena-ai
+git clone https://github.com/X4R1S3/ASTRALENA.git astralena-ai
 cd astralena-ai
-
-# Install the locked dependency graph
 pnpm install
-
-# Configure your bot
-nano config.json
-
-# Keep your WhatsApp session ID out of git: export it privately instead of
-# writing it into config.json (the bot reads SESSION_ID first).
-export SESSION_ID="<your-session-id>"   # or put it in your server's private environment
-
-# Run persistently with PM2 (single instance named "astralena-ai-v3", see ecosystem.config.cjs)
-sudo npm install -g pm2
-npm run pm2:start        # start
-npm run pm2:logs         # view logs (Ctrl+C to leave)
-npm run pm2:restart      # restart
-npm run pm2:stop         # stop
-pm2 save                 # remember the process list
-pm2 startup              # prints ONE command — copy and run it so PM2 starts at boot
 ```
 
-> Run **one** instance only. Never start the bot a second time (another PM2 name,
-> a second copy, `node index.js` in a terminal) against the same `session/` folder —
-> it corrupts the WhatsApp login. On Render, Heroku or a hosting panel the host
-> already supervises the process, so do **not** use PM2 there.
+Create or update `config.json` using your private deployment values. Keep session credentials and API keys outside Git whenever possible.
 
-Health endpoints (port `PORT`, default 3000): `/live` returns 200 while the process
-is up; `/ready` returns 200 only while WhatsApp is actually connected (503 otherwise).
+```bash
+# Recommended local start without PM2
+npm run start:plain
 
-### Deploy on Heroku
+# Production-style start through the project PM2 command
+npm start
+```
 
-Heroku requires a paid dyno for persistent operation.
+For a long-running server, use the PM2 commands described in [Process operations](#process-operations).
+
+## Configuration
+
+ASTRALENA reads its main project settings from `config.json` and can also read private environment values. Never commit live credentials, session IDs, provider keys, or personal tokens.
+
+| Variable | Purpose |
+|---|---|
+| `SESSION_ID` | Preferred private WhatsApp session value for hosted deployments. |
+| `GITHUB_TOKEN` | Authorized GitHub repository operations. |
+| `GITHUB_USERNAME` | GitHub account lookups used by repository commands. |
+| `GROQ_API_KEY` | Groq-powered chatbot, voice, image understanding, and model commands. |
+| `OPENROUTER_API_KEY` | OpenRouter-backed model commands. |
+| `PORT` | HTTP service port; health endpoints default to port `3000`. |
+
+You may configure selected values through the bot's owner tools, but a protected host environment or secret manager is preferred for production.
+
+## Deployment runbooks
+
+### Render
+
+1. Fork or connect [X4R1S3/ASTRALENA](https://github.com/X4R1S3/ASTRALENA) in Render.
+2. Create a **Web Service**.
+3. Use `pnpm install` as the build command.
+4. Use `npm start` as the start command.
+5. Add `SESSION_ID` and other private variables in Render's environment settings.
+6. Set the health check path to `/live`.
+
+Render's free tier may sleep after inactivity. Choose a persistent instance for continuous operation.
+
+### VPS with PM2
+
+```bash
+sudo apt update && sudo apt install -y nodejs npm git
+sudo npm install -g pnpm pm2
+
+git clone https://github.com/X4R1S3/ASTRALENA.git astralena-ai
+cd astralena-ai
+pnpm install
+
+# Configure privately, then start one process only
+export SESSION_ID="<your-session-id>"
+npm run pm2:start
+npm run pm2:logs
+```
+
+Useful process commands:
+
+```bash
+npm run pm2:status
+npm run pm2:restart
+npm run pm2:stop
+pm2 save
+pm2 startup
+```
+
+### Heroku
+
+Heroku requires a suitable paid dyno for persistent operation.
 
 ```bash
 heroku login
@@ -193,111 +217,126 @@ git push heroku main
 heroku ps:scale web=1
 ```
 
-Set `sessionId` and the required configuration values before deploying. Heroku's filesystem can reset after a dyno restart, so use a deployment-safe configuration strategy for production environments.
+Configure session and provider values through Heroku config vars. Do not place credentials in the repository.
 
-### Deploy on a hosting panel
+### Hosting panel
 
-1. Create a Node.js server using Node 20 or later.
-2. Upload the project with SFTP or use the panel's Git integration.
-3. Set the startup command to `node index.js`.
-4. Run `pnpm install` from the console.
-5. Configure `sessionId`, owner details, and the bot settings in `config.json`.
-6. Start the service and monitor its logs.
+1. Create a Node.js application using Node 22 or newer.
+2. Upload the project or connect the Git repository.
+3. Set the startup command to `node index.js` or the panel's equivalent.
+4. Run `pnpm install`.
+5. Configure private session and provider values.
+6. Start the service and monitor logs.
 
-### Deploy on Termux
+### Termux
 
 ```bash
-# Update Termux
 pkg update -y && pkg upgrade -y
-
-# Install prerequisites
 pkg install -y nodejs-lts git
 npm install -g pnpm
 
-# Clone and install
-git clone https://github.com/CEO-ASTRALENA/ASTRALENA-AI.git astralena-ai
+git clone https://github.com/X4R1S3/ASTRALENA.git astralena-ai
 cd astralena-ai
 pnpm install
-
-# Configure and start
-nano config.json
 node index.js
 ```
 
-For longer sessions on Android, use `termux-wake-lock`, disable battery optimisation for Termux, and run the service inside `tmux` when appropriate.
+For longer Android sessions, use `termux-wake-lock`, disable battery optimization for Termux, and run the process inside `tmux` when appropriate.
 
----
+## Process operations
 
-## Connect your WhatsApp account
+ASTRALENA exposes health endpoints for host supervisors:
 
-1. Open the [ASTRALENA AI session generator](https://astralena-ai.site/session).
-2. Choose your preferred connection method:
-   - **Pairing link:** enter your WhatsApp number and complete the pairing steps.
-   - **QR code:** open WhatsApp on your phone, go to **Linked devices**, choose **Link a device**, and scan the QR code shown by the session generator.
-3. Copy the generated session ID.
-4. Paste it into the `sessionId` field in `config.json`.
-5. Start ASTRALENA AI. The service will restore the session on boot.
-
-Keep session credentials private. Never publish them in a repository, issue, screenshot, or public chat.
-
----
-
-## Optional developer integrations
-
-The following environment variables enable repository-related commands when configured:
-
-| Variable | Purpose |
+| Endpoint | Meaning |
 |---|---|
-| `GITHUB_TOKEN` | GitHub personal access token for authorised repository operations. |
-| `GITHUB_USERNAME` | GitHub username used for repository lookups. |
-| `GROQ_API_KEY` | Groq key (starts with `gsk_`) — powers the chatbot, voice notes, image understanding, `.llama`, `.gptoss`. |
-| `OPENROUTER_API_KEY` | OpenRouter key — powers `.gemini`, `.gptmini`, `.openai`, `.gpt5plus`, `.claude`, `.deepseek`, `.grok`, `.qwen`, `.mistral`, `.kimi`. |
+| `/live` | The process is running. |
+| `/ready` | WhatsApp is connected and the service is ready; returns `503` otherwise. |
 
-You can also set any of these from WhatsApp with `.setvar GROQ_API_KEY=...` and check them with `.aikeys test`.
+Run exactly **one** instance against a given session directory. Starting a second copy with another PM2 name, another terminal, or another host process can corrupt the WhatsApp login state.
 
-Store secrets in your host's environment or a protected configuration file. Never commit credentials to source control.
+## Connect WhatsApp
 
----
+1. Open the [ASTRALENA session generator](https://astralena-ai.site/session).
+2. Choose pairing or QR connection.
+3. Complete the WhatsApp linking flow.
+4. Copy the generated session ID.
+5. Store it privately as `SESSION_ID` or in the deployment configuration.
+6. Start ASTRALENA and confirm `/ready` becomes healthy.
 
-## Project disclaimer
+Keep session credentials private. Do not publish them in a repository, issue, screenshot, log, or public chat.
 
-ASTRALENA AI was built by **Astralena** and is officially developed under the **ASTRALENAVERIFIED** organization. The project may include community contributions, third-party libraries, and optional integrations that are maintained independently.
+## Development workflow
 
-ASTRALENA AI is provided as an extensible open-source automation project. Its security and moderation tools are designed to help identify and reduce phishing, spam, suspicious links, and automated messages, but no automated system can guarantee that every malicious or unwanted message will be detected. Always review permissions, protect session credentials, follow WhatsApp's policies, and configure the project responsibly for your community.
+```bash
+# Install dependencies
+pnpm install
 
----
+# Run the main test suite
+npm test
+
+# Run a focused benchmark
+npm run bench
+
+# Run the bot without PM2
+npm run start:plain
+```
+
+New commands should follow the existing category layout under `commands/`. Keep secrets out of source control, add focused tests where behavior changes, and run the relevant checks before opening a pull request.
+
+## Project layout
+
+```text
+ASTRALENA/
+├── commands/       Command families grouped by capability
+├── lib/            Runtime services, stores, AI, connection, and orchestration
+├── library/        Shared media and metadata helpers
+├── plugins/        Optional extension modules
+├── tests/          Runtime, feature, and subsystem tests
+├── assets/         Visual assets and word-chain resources
+├── config.json     Project configuration template and defaults
+├── ecosystem.config.js
+└── index.js        Application entry point
+```
+
+## Safety and responsible use
+
+ASTRALENA is an automation platform, not a guarantee of perfect moderation or security. Review every permission and integration before production use.
+
+- Follow WhatsApp's terms and the terms of every connected provider.
+- Use downloader and media features only for content you own or are authorized to access.
+- Do not bypass login, payment, CAPTCHA, DRM, or provider access controls.
+- Rotate exposed credentials immediately and invalidate leaked sessions.
+- Use least-privilege tokens for GitHub and AI integrations.
+- Keep backups of configuration and understand the persistence model of your host.
 
 ## Community and support
 
 <div align="center">
 
-[![Main WhatsApp Channel](https://img.shields.io/badge/WhatsApp%20Channel-Follow-25D366?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb78BHmL2AU7fsANSH2y)
-[![Backup WhatsApp Channel](https://img.shields.io/badge/Backup%20Channel-Follow-25D366?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb6sMEy96H4VI2w3I50F)
+[![WhatsApp Channel](https://img.shields.io/badge/WhatsApp%20Channel-Follow-25D366?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb78BHmL2AU7fsANSH2y)
+[![Backup Channel](https://img.shields.io/badge/Backup%20Channel-Follow-25D366?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb6sMEy96H4VI2w3I50F)
 [![Support Group](https://img.shields.io/badge/Support%20Group-Join-25D366?style=for-the-badge&logo=whatsapp)](https://chat.whatsapp.com/D4h54lfB8neBvOzXMW19Tm?s=cl&p=a&mlu=4&ilr=4)
 [![Telegram Channel](https://img.shields.io/badge/Telegram%20Channel-Join-26A5E4?style=for-the-badge&logo=telegram)](https://t.me/ASTRALENA_AIV3)
 [![Telegram Group](https://img.shields.io/badge/Telegram%20Group-Join-26A5E4?style=for-the-badge&logo=telegram)](https://t.me/ASTRALENAV3)
-[![Developer](https://img.shields.io/badge/Developer-Contact-B88CFF?style=for-the-badge&logo=telegram)](https://t.me/astralenaverified)
 [![Website](https://img.shields.io/badge/Website-Visit-00FFF0?style=for-the-badge&logo=vercel&logoColor=black)](https://astralena-ai-site)
 [![Pairing Site](https://img.shields.io/badge/Get%20Session%20ID-Pair%20Now-FF7A59?style=for-the-badge&logo=whatsapp)](https://astralena-ai.site/session)
 
 </div>
 
+## Project disclaimer
+
+ASTRALENA AI was built by Astralena and is developed under the ASTRALENA identity. The repository may include community contributions, third-party libraries, and optional integrations maintained independently.
+
+No automated system can guarantee that every malicious or unwanted message will be detected. Configure the bot responsibly, protect session credentials, review permissions, and follow the rules of every platform you connect.
+
 ---
 
 <div align="center">
 
-### **Protect the conversation. Accelerate the work. Empower every user.**
+### ASTRALENA AI
 
-<sub>ASTRALENA AI — intelligent automation for modern WhatsApp communities.</sub>
+**Intelligent automation for modern communities.**
 
-<br>
-
-<sub>Thanks for visiting my repository.</sub>
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="16" width="88%" alt="animated coloured footer line" />
-
-<br><br>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=00FFF0&height=100&section=footer" alt="ASTRALENA AI footer" />
+[Back to mission control](#mission-control) · [View the repository](https://github.com/X4R1S3/ASTRALENA)
 
 </div>

@@ -35,8 +35,8 @@ It combines group protection, intelligent automation, developer tooling, media u
 | Focus | WhatsApp automation, community operations, AI, productivity, and media tooling |
 | Runtime | Node.js 22 or newer |
 | Process model | PM2-ready with health endpoints |
-| Primary repository | [X4R1S3/ASTRALENA](https://github.com/X4R1S3/ASTRALENA) |
-| Core messaging layer | [X4R1S3/baileys](https://github.com/X4R1S3/baileys) |
+| Primary repository | [![X4R1S3/ASTRALENA](https://img.shields.io/badge/X4R1S3%2FASTRALENA-Open-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/X4R1S3/ASTRALENA) |
+| Core messaging layer | [![X4R1S3/baileys](https://img.shields.io/badge/X4R1S3%2Fbaileys-Open-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/X4R1S3/baileys) |
 | License | MIT |
 
 ## System map
@@ -51,33 +51,6 @@ ASTRALENA is organized like a small operations platform rather than a single-pur
 | **Developer bay** | Repository tools, code helpers, package utilities, file conversion, web capture, OCR, and automation helpers. |
 | **Media lab** | Image effects, stickers, audio, video, documents, thumbnails, and format conversion. |
 | **Operations core** | Session handling, process locks, health monitoring, scheduled work, stores, caching, and controlled restarts. |
-
-## Core capabilities
-
-### Community protection
-
-- Anti-link, anti-spam, anti-bot, anti-scam, anti-raid, anti-delete, anti-forwarding, and anti-fake controls.
-- Group permissions, warnings, moderation logs, member tools, tag utilities, approvals, and invite management.
-- Configurable newcomer, poll, sticker, location, contact, document, audio, video, and event policies.
-
-### AI and productivity
-
-- Chatbot and intent workflows for practical everyday assistance.
-- Multiple AI provider integrations through configurable keys.
-- Translation, summaries, writing help, coding support, OCR, document generation, image understanding, and voice workflows.
-- Notes, reminders, schedules, link utilities, calculators, encoding tools, weather, location, and information commands.
-
-### Media and developer tooling
-
-- Social-media and short-drama download commands through the integrated `social-dl` ecosystem.
-- Image effects, stickers, thumbnails, audio extraction, video conversion, TTS, screenshots, PDFs, spreadsheets, documents, archives, and QR utilities.
-- GitHub repository operations, package inspection, code formatting helpers, web capture, and developer-oriented commands.
-
-### Community experience
-
-- Games, economy systems, profiles, leaderboards, rewards, challenges, and interactive group utilities.
-- Greeting cards, welcome and goodbye flows, group status tools, auto reactions, presence controls, and configurable responders.
-- Plugin-oriented command folders make it possible to extend the system without reshaping the entire runtime.
 
 ## Command families
 
@@ -150,7 +123,7 @@ npm run start:plain
 npm start
 ```
 
-For a long-running server, use the PM2 commands described in [Process operations](#process-operations).
+For a long-running server, use the PM2 commands described in [![Process operations](https://img.shields.io/badge/Process%20operations-Open-00FFF0?style=for-the-badge&labelColor=07111F)](#process-operations).
 
 ## Configuration
 
@@ -171,7 +144,7 @@ You may configure selected values through the bot's owner tools, but a protected
 
 ### Render
 
-1. Fork or connect [X4R1S3/ASTRALENA](https://github.com/X4R1S3/ASTRALENA) in Render.
+1. Fork or connect [![X4R1S3/ASTRALENA](https://img.shields.io/badge/X4R1S3%2FASTRALENA-Open-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/X4R1S3/ASTRALENA) in Render.
 2. Create a **Web Service**.
 3. Use `pnpm install` as the build command.
 4. Use `npm start` as the start command.
@@ -256,7 +229,7 @@ Run exactly **one** instance against a given session directory. Starting a secon
 
 ## Connect WhatsApp
 
-1. Open the [ASTRALENA session generator](https://astralena-ai.site/session).
+1. Open the [![ASTRALENA session generator](https://img.shields.io/badge/ASTRALENA%20session%20generator-Open-00FFF0?style=for-the-badge&labelColor=07111F)](https://astralena-ai.site/session).
 2. Choose pairing or QR connection.
 3. Complete the WhatsApp linking flow.
 4. Copy the generated session ID.
@@ -311,7 +284,7 @@ ASTRALENA is an automation platform, not a guarantee of perfect moderation or se
 
 ## Project disclaimer
 
-ASTRALENA AI was built by Astralena and is developed under the ASTRALENA identity. The repository may include community contributions, third-party libraries, and optional integrations maintained independently.
+ASTRALENA AI was built by X4R1S3 and is developed under the ASTRALENA identity. The repository may include community contributions, third-party libraries, and optional integrations maintained independently.
 
 No automated system can guarantee that every malicious or unwanted message will be detected. Configure the bot responsibly, protect session credentials, review permissions, and follow the rules of every platform you connect.
 
@@ -329,6 +302,6 @@ Your star helps the project reach more builders. Your fork is an invitation to e
 
 **ASTRALENA AI — intelligent automation for modern communities.**
 
-[Back to mission control](#mission-control) · [View the repository](https://github.com/X4R1S3/ASTRALENA)
+[![Back to mission control](https://img.shields.io/badge/Back%20to%20mission%20control-Open-00FFF0?style=for-the-badge&labelColor=07111F)](#mission-control) · [![View the repository](https://img.shields.io/badge/View%20the%20repository-Open-00FFF0?style=for-the-badge&labelColor=07111F)](https://github.com/X4R1S3/ASTRALENA)
 
 </div>

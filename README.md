@@ -1,8 +1,7 @@
 <div align="center">
 
-<img src="./assets/astralena-space-banner.jpg" alt="ASTRALENA space technology banner" width="100%" />
-<img src="./assets/rolling-circle.svg" width="360" alt="Astronaut drifting around Earth in a looping space circle" />
 <img src="./assets/astralena-earth-orbit.jpg" width="100%" alt="Space shuttle above Earth's atmosphere" />
+<img src="./assets/rolling-circle.svg" width="90" alt="ASTRALENA AI rolling circle" />
 # ASTRALENA AI
 
 ### Space-inspired automation for safer, smarter WhatsApp communities

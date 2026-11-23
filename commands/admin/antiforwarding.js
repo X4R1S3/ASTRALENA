@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -25,6 +26,7 @@ module.exports = {
     adminOnly: true,
 
     execute: async (sock, m, { args, reply, prefix }) => {
+        if (await antiMute.handle(args.bot || sock, m, args, 'antiforwarding', 'Anti-Forwarding', {})) return;
         const db = loadDB();
         const groupId = m.chat;
         if (!db[groupId]) db[groupId] = { enabled: false, action: 'warn', maxWarns: 3 };
@@ -35,11 +37,12 @@ module.exports = {
         // .antiforwarding  — show status
         if (!sub) {
             const status = db[groupId].enabled ? 'ON' : 'OFF';
-            const action = db[groupId].action || 'warn';
+            const action = antiMute.label(db[groupId], 'warn');
             return reply(
                 `╭─❍ *ANTI-FORWARDING*\n` +
                 `│ Status   : *${status}*\n` +
-                `│ Action   : *${action.toUpperCase()}*\n` +
+                `│ Action   : *${action}*\n` +
+                (antiMute.schedText(db[groupId]) ? `│ ${antiMute.schedText(db[groupId])}\n` : '') +
                 `│ Warnings : ${db[groupId].maxWarns || 3}\n` +
                 `│\n` +
                 `│ Commands:\n` +
@@ -49,6 +52,8 @@ module.exports = {
                 `│ .antiforwarding kick\n` +
                 `│ .antiforwarding warn [1-3]\n` +
                 `│ .antiforwarding action delete|warn|kick\n` +
+                `│ .antiforwarding mute [time]\n` +
+                `│ .antiforwarding sch -mute 2am to 6am daily\n` +
                 `╰────────────────`
             );
         }

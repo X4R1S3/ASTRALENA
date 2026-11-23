@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 const { parseTime, humanize, schedule, cancel } = require('../../lib/mute-core');
 
@@ -13,6 +14,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'dnd', 'DND', {})) return;
         const groupId = m.chat;
         const sub     = (args[0] || '').toLowerCase();
         const dbPath  = './database/dnd.json';
@@ -26,13 +28,13 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `dnd status
 Status: ${s.enabled ? 'ON' : 'OFF'}
-Action: ${(s.action || 'delete').toUpperCase()}
+Action: ${antiMute.label(s, 'delete')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns || 3}
 Custom message: ${s.customMsg || '(default)'}
 
 Usage:
 ${bot.prefix}dnd on/off
-${bot.prefix}dnd delete / kick / warn [1-3]
+${bot.prefix}dnd delete / kick / warn [1-3]${antiMute.usage(bot.prefix, 'dnd')}
 ${bot.prefix}dnd msg <text>
 ${bot.prefix}dnd 5h              — on now, auto-off in 5h
 ${bot.prefix}dnd after 2h        — on in 2h

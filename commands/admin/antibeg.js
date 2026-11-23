@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Detection (BEG_PATTERNS/detectBeg) lives in lib/antiPatterns.js and is
@@ -13,6 +14,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antibeg', 'Anti-Beg', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antibeg.json';
@@ -26,7 +28,7 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antibeg status
 Status: ${s.enabled ? 'ON' : 'OFF'}
-Action: ${(s.action||'warn').toUpperCase()}
+Action: ${antiMute.label(s, 'warn')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns||3}
 
 Flags begging/solicitation messages — "please help me", "send me
@@ -36,7 +38,7 @@ Usage:
 ${bot.prefix}antibeg on/off
 ${bot.prefix}antibeg delete
 ${bot.prefix}antibeg kick
-${bot.prefix}antibeg warn [1-3]`);
+${bot.prefix}antibeg warn [1-3]${antiMute.usage(bot.prefix, 'antibeg')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Beg enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Beg disabled.'); }

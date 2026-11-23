@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -25,6 +26,7 @@ module.exports = {
     adminOnly: true,
 
     execute: async (sock, m, { args, reply, prefix }) => {
+        if (await antiMute.handle(args.bot || sock, m, args, 'antibot', 'Anti-Bot', {})) return;
         const db = loadDB();
         const groupId = m.chat;
         if (!db[groupId]) db[groupId] = { enabled: false, action: 'kick', maxWarns: 3 };
@@ -35,11 +37,12 @@ module.exports = {
         // .antibot  — show status
         if (!sub) {
             const status = db[groupId].enabled ? 'ON' : 'OFF';
-            const action = db[groupId].action || 'kick';
+            const action = antiMute.label(db[groupId], 'kick');
             return reply(
                 `╭─❍ *ANTI-BOT* 𓉤\n` +
                 `│ Status   : *${status}*\n` +
-                `│ Action   : *${action.toUpperCase()}*\n` +
+                `│ Action   : *${action}*\n` +
+                (antiMute.schedText(db[groupId]) ? `│ ${antiMute.schedText(db[groupId])}\n` : '') +
                 `│ Warnings : ${db[groupId].maxWarns || 3}\n` +
                 `│\n` +
                 `│ Commands:\n` +
@@ -49,6 +52,8 @@ module.exports = {
                 `│ .antibot kick\n` +
                 `│ .antibot warn [1-3]\n` +
                 `│ .antibot action delete|warn|kick\n` +
+                `│ .antibot mute [time]\n` +
+                `│ .antibot sch -mute 2am to 6am daily\n` +
                 `╰────────────────`
             );
         }

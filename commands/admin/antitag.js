@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antitag', 'Anti-Tag', { enabled: true })) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antitag.json';
@@ -23,14 +25,14 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antitag status
 Status: ${s.enabled !== false ? 'ON' : 'OFF'}
-Action: ${(s.action||'warn').toUpperCase()}
+Action: ${antiMute.label(s, 'warn')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns||3}
 
 Usage:
 ${bot.prefix}antitag on/off
 ${bot.prefix}antitag delete
 ${bot.prefix}antitag kick
-${bot.prefix}antitag warn [1-3]`);
+${bot.prefix}antitag warn [1-3]${antiMute.usage(bot.prefix, 'antitag')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Tag enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Tag disabled.'); }

@@ -20,12 +20,17 @@ module.exports = {
         if (ms) {
             cancelAll({ chat: m.chat, target: key });
             schedule({ type: 'unmuteUser', chat: m.chat, target: key, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return m.reply(`⏳ @${target.split('@')[0]} will be unmuted in ${humanize(ms)}.`, { mentions: [target] });
+            return m.reply(`\`\`\`\n@${target.split('@')[0]} will exit the communication blackout in ${humanize(ms)}.\n\`\`\``, { mentions: [target] });
         }
 
-        if (!muteStore.getMute(target)) return m.reply(`@${target.split('@')[0]} isn't muted.`, { mentions: [target] });
+        // Also clear an anti-system mute scoped to this group.
+        let wasAntiMuted = false;
+        let forms = [target];
+        try { forms = await require('../../lib/banStore').resolveForms(bot, target); } catch {}
+        for (const form of forms) wasAntiMuted = muteStore.clearChatMute(form, m.chat) || wasAntiMuted;
+        if (!muteStore.getMute(target) && !wasAntiMuted) return m.reply(`@${target.split('@')[0]} isn't muted.`, { mentions: [target] });
         muteStore.clearMute(target);
         cancelAll({ chat: m.chat, target: key });
-        await bot.sendMessage(m.chat, { text: `🔊 @${target.split('@')[0]} has been unmuted.`, mentions: [target] });
+        await bot.sendMessage(m.chat, { text: `\`\`\`\nOrbital silence has ended for @${target.split('@')[0]}.\nThe communication channel is open again.\n\`\`\``, mentions: [target] });
     }
 };

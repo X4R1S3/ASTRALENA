@@ -38,7 +38,7 @@ module.exports = {
                 timeTo,
             });
             return m.reply(
-                `🕒 @${target.split('@')[0]} will be muted daily from ${recurring[1]} to ${recurring[2]}.`,
+                `\`\`\`\n@${target.split('@')[0]} will enter a daily communication blackout from ${recurring[1]} to ${recurring[2]}.\n\`\`\``,
                 { mentions: [target] },
             );
         }
@@ -52,7 +52,7 @@ module.exports = {
         if (isAfterMode && ms) {
             cancelAll({ chat: m.chat, target: key });
             schedule({ type: 'muteUser', chat: m.chat, target: key, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return m.reply(`⏳ @${target.split('@')[0]} will be muted in ${humanize(ms)}.`, { mentions: [target] });
+            return m.reply(`\`\`\`\n@${target.split('@')[0]} will enter a communication blackout in ${humanize(ms)}.\n\`\`\``, { mentions: [target] });
         }
 
         const existing = muteStore.getMute(target);
@@ -63,8 +63,8 @@ module.exports = {
         if (ms) {
             cancelAll({ chat: m.chat, target: key });
             schedule({ type: 'unmuteUser', chat: m.chat, target: key, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return bot.sendMessage(m.chat, { text: `🔇 @${target.split('@')[0]} muted for ${humanize(ms)} — auto-unmutes when timer ends.`, mentions: [target] });
+            return bot.sendMessage(m.chat, { text: `\`\`\`\n@${target.split('@')[0]} has entered a communication blackout.\nDuration: ${humanize(ms)}.\nThe channel will reopen automatically when the timer ends.\n\`\`\``, mentions: [target] });
         }
-        await bot.sendMessage(m.chat, { text: `🔇 @${target.split('@')[0]} has been muted.`, mentions: [target] });
+        await bot.sendMessage(m.chat, { text: `\`\`\`\n@${target.split('@')[0]} has entered a communication blackout.\nThe channel remains closed until an admin unmutes them.\n\`\`\``, mentions: [target] });
     }
 };

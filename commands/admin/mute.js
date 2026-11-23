@@ -19,7 +19,7 @@ module.exports = {
         if (isAfter && ms) {
             cancelAll({ chat: jid });
             schedule({ type: 'muteGroup', chat: jid, expiresAt: Date.now() + ms, mutedBy: m.sender, source: 'delayed' });
-            return m.reply(`_Request received, group will be muted in ${humanize(ms)} (delayed action)_`);
+            return m.reply(`\`\`\`\nOrbital mute scheduled.\nThis group channel will enter communication lockdown in ${humanize(ms)}.\n\`\`\``);
         }
 
         try { await bot.sock.groupSettingUpdate(jid, 'announcement'); }
@@ -33,12 +33,12 @@ module.exports = {
             cancelAll({ chat: jid });
             schedule({ type: 'unmuteGroup', chat: jid, expiresAt: Date.now() + ms, mutedBy: m.sender, source: 'timer' });
             return bot.sendMessage(jid, {
-                text: `_Group muted for ${humanize(ms)} (timed action)_`,
+                text: `\`\`\`\nOrbital control has placed this group in communication lockdown.\nDuration: ${humanize(ms)}.\nThe channel will reopen automatically when the timer ends.\n\`\`\``,
                 mentions: all
             });
         }
 
         // ── Infinite: .mute ────────────────────────────────────────────────
-        await bot.sendMessage(jid, { text: '_Group muted (infinite action)_', mentions: all });
+        await bot.sendMessage(jid, { text: `\`\`\`\nOrbital control has placed this group in communication lockdown.\nThe channel remains closed until an admin reopens it.\n\`\`\``, mentions: all });
     }
 };

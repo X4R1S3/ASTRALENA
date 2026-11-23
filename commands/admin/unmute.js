@@ -17,7 +17,7 @@ module.exports = {
         if (ms) {
             cancelAll({ chat: jid });
             schedule({ type: 'unmuteGroup', chat: jid, expiresAt: Date.now() + ms, mutedBy: m.sender, source: 'delayed' });
-            return m.reply(`_Request received, group will be unmuted in ${humanize(ms)} (delayed action)_`);
+            return m.reply(`\`\`\`\nOrbital reopening scheduled.\nThis group channel will reopen in ${humanize(ms)}.\n\`\`\``);
         }
 
         try { await bot.sock.groupSettingUpdate(jid, 'not_announcement'); }
@@ -28,7 +28,7 @@ module.exports = {
         try { const meta = await bot.sock.groupMetadata(jid); all.push(...meta.participants.map(p => p.id || p.jid || p.phoneNumber).filter(Boolean)); } catch {}
 
         // ── Infinite: .unmute ──────────────────────────────────────────────
-        await bot.sendMessage(jid, { text: '_Group unmuted (infinite action)_', mentions: all });
+        await bot.sendMessage(jid, { text: `\`\`\`\nOrbital silence has ended.\nThis group channel is open for transmissions again.\n\`\`\``, mentions: all });
     }
 };
 

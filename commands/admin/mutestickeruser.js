@@ -36,7 +36,7 @@ module.exports = {
         expiresAt: Date.now() + duration,
         mutedBy: m.sender,
       });
-      return m.reply(`@${target.split('@')[0]}'s stickers will be blocked in ${humanize(duration)}.`, {
+      return m.reply(`\`\`\`\n@${target.split('@')[0]}'s sticker transmissions will be blocked in ${humanize(duration)}.\n\`\`\``, {
         mentions: [target],
       });
     }
@@ -63,13 +63,13 @@ module.exports = {
         mutedBy: m.sender,
       });
       return bot.sendMessage(m.chat, {
-        text: `@${target.split('@')[0]}'s stickers are blocked for ${humanize(duration)}.`,
+        text: `\`\`\`\n@${target.split('@')[0]}'s sticker transmissions are blocked for ${humanize(duration)}.\n\`\`\``,
         mentions: [target],
       });
     }
 
     return bot.sendMessage(m.chat, {
-      text: `@${target.split('@')[0]}'s stickers are now blocked.`,
+      text: `\`\`\`\n@${target.split('@')[0]}'s sticker transmissions are now blocked.\n\`\`\``,
       mentions: [target],
     });
   },

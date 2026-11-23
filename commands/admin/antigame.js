@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antigame', 'Anti-Game', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antigame.json';
@@ -23,14 +25,14 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antigame status
 Status: ${s.enabled ? 'ON' : 'OFF'}
-Action: ${(s.action||'warn').toUpperCase()}
+Action: ${antiMute.label(s, 'warn')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns||3}
 
 Usage:
 ${bot.prefix}antigame on/off
 ${bot.prefix}antigame delete
 ${bot.prefix}antigame kick
-${bot.prefix}antigame warn [1-3]`);
+${bot.prefix}antigame warn [1-3]${antiMute.usage(bot.prefix, 'antigame')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Game enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Game disabled.'); }

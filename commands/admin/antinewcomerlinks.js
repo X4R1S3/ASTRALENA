@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Enforced from lib/antiSystems.js#_checkAllInner like every other anti-system.
@@ -12,6 +13,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antinewcomerlinks', 'Anti-Newcomer-Links', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antinewcomerlinks.json';
@@ -23,7 +25,7 @@ module.exports = {
         const save = () => fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 
         if (!sub || sub === 'status') return await m.reply(
-`antinewcomerlinks status\nStatus: ${s.enabled ? 'ON' : 'OFF'}\nAction: ${(s.action||'delete').toUpperCase()}\nMaxWarns: ${s.maxWarns||3}\nMinutes: ${s.minutes||10}\n\nDeletes links sent by non-admin members within the first few minutes after they join.\n\nUsage:\n${bot.prefix}antinewcomerlinks on/off\n${bot.prefix}antinewcomerlinks delete\n${bot.prefix}antinewcomerlinks kick\n${bot.prefix}antinewcomerlinks warn [1-3]\n${bot.prefix}antinewcomerlinks <1-60>  (minutes after joining)`);
+`antinewcomerlinks status\nStatus: ${s.enabled ? 'ON' : 'OFF'}\nAction: ${antiMute.label(s, 'delete')}${antiMute.sched(s)}\nMaxWarns: ${s.maxWarns||3}\nMinutes: ${s.minutes||10}\n\nDeletes links sent by non-admin members within the first few minutes after they join.\n\nUsage:\n${bot.prefix}antinewcomerlinks on/off\n${bot.prefix}antinewcomerlinks delete\n${bot.prefix}antinewcomerlinks kick\n${bot.prefix}antinewcomerlinks warn [1-3]\n${bot.prefix}antinewcomerlinks <1-60>  (minutes after joining)${antiMute.usage(bot.prefix, 'antinewcomerlinks')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Newcomer-Links enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Newcomer-Links disabled.'); }

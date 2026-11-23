@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 /**
  * AntiGCStatus — Block/delete group status posts made by members.
  * Uses the SAME enabled/action(delete|warn|kick) system as the rest of
@@ -35,6 +36,7 @@ module.exports = {
     adminOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antigcstatus', 'Anti-Group-Status', {})) return;
         const db = loadDB();
         const groupId = m.chat;
         if (!db[groupId]) db[groupId] = { enabled: false, action: 'warn', maxWarns: 3 };
@@ -45,11 +47,12 @@ module.exports = {
         // .antigcstatus — show status
         if (!sub || sub === 'status') {
             const status = db[groupId].enabled ? 'ON' : 'OFF';
-            const action = db[groupId].action || 'warn';
+            const action = antiMute.label(db[groupId], 'warn');
             return m.reply(
                 `📊 *Anti-Group-Status Settings*\n\n` +
                 `Status : *${status}*\n` +
-                `Action : *${action.toUpperCase()}*\n` +
+                `Action : *${action}*\n` +
+                (antiMute.schedText(db[groupId]) ? `${antiMute.schedText(db[groupId])}\n` : '') +
                 `Warnings: ${db[groupId].maxWarns || 3}\n\n` +
                 `*Usage:*\n` +
                 `• \`${bot.prefix}antigcstatus on\`\n` +
@@ -57,6 +60,8 @@ module.exports = {
                 `• \`${bot.prefix}antigcstatus delete\`\n` +
                 `• \`${bot.prefix}antigcstatus kick\`\n` +
                 `• \`${bot.prefix}antigcstatus warn [1-3]\`\n` +
+                `• \`${bot.prefix}antigcstatus mute [time]\`\n` +
+                `• \`${bot.prefix}antigcstatus sch -mute 2am to 6am daily\`\n` +
                 `• \`${bot.prefix}antigcstatus action delete|warn|kick\`\n` +
                 `• \`${bot.prefix}antigcstatus status\``
             );

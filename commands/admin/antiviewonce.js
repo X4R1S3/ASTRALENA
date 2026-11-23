@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Enforced from lib/antiSystems.js#_checkAllInner like every other anti-system.
@@ -12,6 +13,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antivv', 'Anti-ViewOnce', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antivv.json';
@@ -25,7 +27,7 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antivv status
 Status: ${s.enabled ? 'ON' : 'OFF'}
-Action: ${(s.action||'warn').toUpperCase()}
+Action: ${antiMute.label(s, 'warn')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns||3}
 
 Deletes any view-once photo, video or voice note sent by a non-admin member.
@@ -34,7 +36,7 @@ Usage:
 ${bot.prefix}antivv on/off
 ${bot.prefix}antivv delete
 ${bot.prefix}antivv kick
-${bot.prefix}antivv warn [1-3]`);
+${bot.prefix}antivv warn [1-3]${antiMute.usage(bot.prefix, 'antivv')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-ViewOnce enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-ViewOnce disabled.'); }

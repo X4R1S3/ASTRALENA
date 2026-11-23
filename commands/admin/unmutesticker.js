@@ -43,7 +43,7 @@ module.exports = {
         if (isAfterMode && ms) {
             cancel({ type: 'unblockSticker', chat: m.chat, target: hash });
             schedule({ type: 'unblockSticker', chat: m.chat, target: hash, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return m.reply(`⏳ This sticker will be unblocked in ${humanize(ms)}.`);
+            return m.reply(`\`\`\`\nSticker transmission will be restored in ${humanize(ms)}.\n\`\`\``);
         }
 
         const db   = readDB();
@@ -64,9 +64,9 @@ module.exports = {
         // work in the opposite direction.
         if (ms) {
             schedule({ type: 'blockSticker', chat: m.chat, target: hash, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return bot.sendMessage(m.chat, { text: `✅ Sticker unbanned for ${humanize(ms)} — it will be auto re-blocked when the timer ends.` });
+            return bot.sendMessage(m.chat, { text: `\`\`\`\nSticker transmission restored for ${humanize(ms)}.\nIt will be placed back under orbital restriction when the timer ends.\n\`\`\`` });
         }
 
-        return m.reply('✅ Sticker unbanned — it can be sent again.');
+        return m.reply('```\nOrbital sticker restriction lifted.\nThis sticker can be sent again.\n```');
     }
 };

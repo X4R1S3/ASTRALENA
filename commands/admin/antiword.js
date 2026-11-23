@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -25,6 +26,7 @@ module.exports = {
     adminOnly: true,
 
     execute: async (sock, m, { args, reply, prefix }) => {
+        if (await antiMute.handle(args.bot || sock, m, args, 'antiword', 'Anti-Word', {})) return;
         const db = loadDB();
         const groupId = m.chat;
         if (!db[groupId]) db[groupId] = { enabled: false, words: [], action: 'warn', maxWarns: 3 };
@@ -35,12 +37,13 @@ module.exports = {
         // .antiword  — show status
         if (!sub) {
             const status = db[groupId].enabled ? 'ON' : 'OFF';
-            const action = db[groupId].action || 'warn';
+            const action = antiMute.label(db[groupId], 'warn');
             const words = db[groupId].words || [];
             return reply(
                 `╭─❍ *ANTI-WORD*\n` +
                 `│ Status   : *${status}*\n` +
-                `│ Action   : *${action.toUpperCase()}*\n` +
+                `│ Action   : *${action}*\n` +
+                (antiMute.schedText(db[groupId]) ? `│ ${antiMute.schedText(db[groupId])}\n` : '') +
                 `│ Warnings : ${db[groupId].maxWarns || 3}\n` +
                 `│ Words    : ${words.length}\n` +
                 `│\n` +
@@ -51,6 +54,8 @@ module.exports = {
                 `│ .antiword kick\n` +
                 `│ .antiword warn [1-3]\n` +
                 `│ .antiword action delete|warn|kick\n` +
+                `│ .antiword mute [time]\n` +
+                `│ .antiword sch -mute 2am to 6am daily\n` +
                 `│ .antiword add <word>\n` +
                 `│ .antiword remove <word>\n` +
                 `│ .antiword list\n` +

@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antispam', 'Anti-Spam', { enabled: true })) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antispam.json';
@@ -23,7 +25,7 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antispam status
 Status: ${s.enabled !== false ? 'ON' : 'OFF'}
-Action: ${(s.action||'warn').toUpperCase()}
+Action: ${antiMute.label(s, 'warn')}${antiMute.sched(s)}
 Limit: ${s.limit||5} msgs
 Cooldown: ${(s.cooldown||10000)/1000}s
 MaxWarns: ${s.maxWarns||3}
@@ -32,7 +34,7 @@ Usage:
 ${bot.prefix}antispam on/off
 ${bot.prefix}antispam delete
 ${bot.prefix}antispam kick
-${bot.prefix}antispam warn [1-3]
+${bot.prefix}antispam warn [1-3]${antiMute.usage(bot.prefix, 'antispam')}
 ${bot.prefix}antispam limit 5 10`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Spam enabled.'); }

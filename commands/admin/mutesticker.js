@@ -32,7 +32,7 @@ module.exports = {
 
         if (sub === 'list') {
             if (!db[m.chat].length) return m.reply('No stickers are blocked in this group.');
-            return m.reply(`🚫 ${db[m.chat].length} sticker(s) currently blocked in this group.`);
+            return m.reply(`\`\`\`\n${db[m.chat].length} sticker transmission(s) are currently blocked in this group.\n\`\`\``);
         }
 
         if (sub === 'clear') {
@@ -49,11 +49,7 @@ module.exports = {
         const ctx = m.contextInfo || m.msg?.contextInfo || {};
         const quotedSticker = ctx.quotedMessage?.stickerMessage;
         if (!quotedSticker) {
-            return m.reply(
-                '🚫 *Block Sticker*\n\n' +
-                `Reply to a sticker with ${bot.prefix}blocksticker [1h] [after 2h] to ban it.\n` +
-                'It will be auto-deleted every time anyone sends it again.'
-            );
+            return m.reply(`\`\`\`\nSticker interception protocol\nReply to a sticker with ${bot.prefix}blocksticker [1h] [after 2h] to block it.\nIt will be deleted every time anyone sends it again.\n\`\`\``);
         }
 
         const id = quotedSticker.fileSha256 || quotedSticker.fileEncSha256;
@@ -72,11 +68,11 @@ module.exports = {
         if (isAfterMode && ms) {
             cancel({ type: 'blockSticker', chat: m.chat, target: hash });
             schedule({ type: 'blockSticker', chat: m.chat, target: hash, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return m.reply(`⏳ This sticker will be blocked in ${humanize(ms)}.`);
+            return m.reply(`\`\`\`\nSticker transmission scheduled for interception in ${humanize(ms)}.\n\`\`\``);
         }
 
         if (db[m.chat].includes(hash)) {
-            return m.reply('⚠️ This sticker is already blocked!');
+            return m.reply('This sticker transmission is already blocked.');
         }
 
         db[m.chat].push(hash);
@@ -86,14 +82,9 @@ module.exports = {
         if (ms) {
             cancel({ type: 'unblockSticker', chat: m.chat, target: hash });
             schedule({ type: 'unblockSticker', chat: m.chat, target: hash, expiresAt: Date.now() + ms, mutedBy: m.sender });
-            return bot.sendMessage(m.chat, { text: `🚫 Sticker blocked for ${humanize(ms)} — auto-unblocks when the timer ends.` });
+            return bot.sendMessage(m.chat, { text: `\`\`\`\nThis sticker transmission is blocked for ${humanize(ms)}.\nIt will be cleared from the restriction list when the timer ends.\n\`\`\`` });
         }
 
-        return m.reply(
-            '🚫 *Sticker Blocked!*\n\n' +
-            'This sticker is now banned from this group.\n' +
-            'It will be auto-deleted when anyone sends it.\n\n' +
-            `Use ${bot.prefix}unblocksticker (as a reply to it) to unblock.`
-        );
+        return m.reply(`\`\`\`\nSticker transmission intercepted.\nThis sticker is now blocked in the group and will be deleted if sent again.\nUse ${bot.prefix}unblocksticker as a reply to restore it.\n\`\`\``);
     }
 };

@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Enforced from lib/antiSystems.js#_checkAllInner like every other anti-system.
@@ -12,6 +13,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antidoc', 'Anti-Doc', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antidoc.json';
@@ -23,7 +25,7 @@ module.exports = {
         const save = () => fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 
         if (!sub || sub === 'status') return await m.reply(
-`antidoc status\nStatus: ${s.enabled ? 'ON' : 'OFF'}\nAction: ${(s.action||'delete').toUpperCase()}\nMaxWarns: ${s.maxWarns||3}\n\nDeletes any document/file sent by a non-admin member.\n\nUsage:\n${bot.prefix}antidoc on/off\n${bot.prefix}antidoc delete\n${bot.prefix}antidoc kick\n${bot.prefix}antidoc warn [1-3]`);
+`antidoc status\nStatus: ${s.enabled ? 'ON' : 'OFF'}\nAction: ${antiMute.label(s, 'delete')}${antiMute.sched(s)}\nMaxWarns: ${s.maxWarns||3}\n\nDeletes any document/file sent by a non-admin member.\n\nUsage:\n${bot.prefix}antidoc on/off\n${bot.prefix}antidoc delete\n${bot.prefix}antidoc kick\n${bot.prefix}antidoc warn [1-3]${antiMute.usage(bot.prefix, 'antidoc')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Doc enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Doc disabled.'); }

@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Anti-Fake — flags/removes joining members whose number doesn't start with
@@ -23,6 +24,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antifake', 'Anti-Fake', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antifake.json';
@@ -36,7 +38,7 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antifake status
 Status: ${s.enabled ? 'ON' : 'OFF'}
-Action: ${(s.action||'kick').toUpperCase()}
+Action: ${antiMute.label(s, 'kick')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns||3}
 
 Flags members who join with a number that has no valid international
@@ -45,7 +47,7 @@ country code (fake/unrecognized numbers).
 Usage:
 ${bot.prefix}antifake on/off
 ${bot.prefix}antifake kick
-${bot.prefix}antifake warn [1-3]`);
+${bot.prefix}antifake warn [1-3]${antiMute.usage(bot.prefix, 'antifake')}`);
 
         if (sub === 'on')   { s.enabled = true;  save(); return await m.reply('Anti-Fake enabled.'); }
         if (sub === 'off')  { s.enabled = false; save(); return await m.reply('Anti-Fake disabled.'); }

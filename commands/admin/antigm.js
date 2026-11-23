@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs   = require('fs-extra');
 const path = require('path');
 // Anchored to the project root (not process.cwd()) so persistent data
@@ -21,6 +22,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antigroupmention', 'Anti-Group-Mention', {})) return;
         const jid = m.chat;
         const a0  = (args[0] || '').toLowerCase();
         const a1  = (args[1] || '').toLowerCase();
@@ -32,13 +34,15 @@ module.exports = {
 `🔒 *Anti Group Mention*
 
 ❏◦ Status: \`${cfg.enabled ? '✅ ON' : '❌ OFF'}\`
-❏◦ Action: *${(cfg.action || 'warn').toUpperCase()}*
+❏◦ Action: *${antiMute.label(cfg, 'warn')}${antiMute.sched(cfg)}*
 ❏◦ Max Warns: *${cfg.maxWarns || 3}* (warn mode only)
 
 *Commands:*
 ${bot.prefix}antigm on / off
 ${bot.prefix}antigm action warn / kick / delete
 ${bot.prefix}antigm maxwarns [1-3]
+${bot.prefix}antigm mute [time]  (mute instead: 10m, 1h, 1d)
+${bot.prefix}antigm sch -mute 2am to 6am daily
 
 _Detects when members mention this group in their WhatsApp status and takes the configured action._`
             );

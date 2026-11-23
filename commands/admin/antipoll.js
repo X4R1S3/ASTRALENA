@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Enforced from lib/antiSystems.js#_checkAllInner like every other anti-system.
@@ -12,6 +13,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antipoll', 'Anti-Poll', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antipoll.json';
@@ -23,7 +25,7 @@ module.exports = {
         const save = () => fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 
         if (!sub || sub === 'status') return await m.reply(
-`antipoll status\nStatus: ${s.enabled ? 'ON' : 'OFF'}\nAction: ${(s.action||'delete').toUpperCase()}\nMaxWarns: ${s.maxWarns||3}\n\nDeletes any poll created by a non-admin member.\n\nUsage:\n${bot.prefix}antipoll on/off\n${bot.prefix}antipoll delete\n${bot.prefix}antipoll kick\n${bot.prefix}antipoll warn [1-3]`);
+`antipoll status\nStatus: ${s.enabled ? 'ON' : 'OFF'}\nAction: ${antiMute.label(s, 'delete')}${antiMute.sched(s)}\nMaxWarns: ${s.maxWarns||3}\n\nDeletes any poll created by a non-admin member.\n\nUsage:\n${bot.prefix}antipoll on/off\n${bot.prefix}antipoll delete\n${bot.prefix}antipoll kick\n${bot.prefix}antipoll warn [1-3]${antiMute.usage(bot.prefix, 'antipoll')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Poll enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Poll disabled.'); }

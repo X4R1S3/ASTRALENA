@@ -1,3 +1,4 @@
+const antiMute = require('../../lib/antiMute');
 const fs = require('fs-extra');
 
 // Detection itself (SCAM_CATEGORIES/detectScam) lives in lib/antiPatterns.js
@@ -14,6 +15,7 @@ module.exports = {
     groupOnly: true,
 
     async execute(bot, m, args) {
+        if (await antiMute.handle(bot, m, args, 'antiscam', 'Anti-Scam', {})) return;
         const groupId = m.chat;
         const sub     = args[0]?.toLowerCase();
         const dbPath  = './database/antiscam.json';
@@ -27,7 +29,7 @@ module.exports = {
         if (!sub || sub === 'status') return await m.reply(
 `antiscam status
 Status: ${s.enabled ? 'ON' : 'OFF'}
-Action: ${(s.action||'delete').toUpperCase()}
+Action: ${antiMute.label(s, 'delete')}${antiMute.sched(s)}
 MaxWarns: ${s.maxWarns||3}
 
 Detects: investment fraud, fake giveaways, phishing, loan/money-mule
@@ -37,7 +39,7 @@ Usage:
 ${bot.prefix}antiscam on/off
 ${bot.prefix}antiscam delete
 ${bot.prefix}antiscam kick
-${bot.prefix}antiscam warn [1-3]`);
+${bot.prefix}antiscam warn [1-3]${antiMute.usage(bot.prefix, 'antiscam')}`);
 
         if (sub === 'on')     { s.enabled = true;  save(); return await m.reply('Anti-Scam enabled.'); }
         if (sub === 'off')    { s.enabled = false; save(); return await m.reply('Anti-Scam disabled.'); }

@@ -14,7 +14,7 @@ module.exports = {
     name: 'mine',
     aliases: ['mining'],
     category: 'economy',
-    reactions: { start: '⚙️' },
+    reactions: { start: '⛏️' },
     description: 'Mine for gems and coins (6 min cooldown)',
 
     async execute(bot, m, args) {

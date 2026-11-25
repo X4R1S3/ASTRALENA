@@ -7,7 +7,7 @@ module.exports = {
     name: 'antivideo',
     aliases: ['av', 'novideo'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🎥' },
     description: 'Block videos (and video notes/GIFs) in this group',
     adminOnly: true,
     groupOnly: true,

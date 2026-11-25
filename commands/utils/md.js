@@ -4,7 +4,7 @@ module.exports = {
     alias: ['syntax', 'code'],
     desc: 'Send syntax-highlighted code block',
     category: 'utils',
-    reactions: { start: '💻' },
+    reactions: { start: '🗑' },
     
     execute: async (sock, m, { args, reply, prefix }) => {
         const input = args.join(' ').trim();

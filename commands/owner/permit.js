@@ -49,7 +49,7 @@ module.exports = {
     name: 'permit',
     aliases: ['permits'],
     category: 'owner',
-    reactions: { start: '🔓' },
+    reactions: { start: '👮' },
     ownerOnly: true,
     description: 'Open a command (or all economy cmds) to everyone in all groups — .permit ping | ping 2h | ping after 2h | economy | remove <cmd> | on/off | .list permit | .clear permit | .sch -permit <cmd> 6pm to 9pm daily',
 

@@ -6,7 +6,7 @@ module.exports = {
     name: 'everyone',
     aliases: [],
     category: 'group',
-    reactions: { start: '👥' },
+    reactions: { start: '🅄' },
     description: 'Tag everyone with your own word or the message you reply to.',
     usage: '.everyone <text>  (or reply to a message)',
     groupOnly: true,

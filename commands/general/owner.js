@@ -2,7 +2,7 @@ module.exports = {
     name: 'owner',
     aliases: ['creator'],
     category: 'general',
-    reactions: { start: '🔐' },
+    reactions: { start: '🄶' },
     description: 'Show bot owner contact as vCard',
 
     async execute(bot, m, args) {

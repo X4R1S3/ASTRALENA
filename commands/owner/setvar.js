@@ -18,7 +18,7 @@ module.exports = {
     category: 'owner',
     desc:      'Set a bot config variable (BOT_NAME, PREFIX, MODE, etc.)',
     ownerOnly: true,
-    reactions: { start: '🔐' },
+    reactions: { start: '🀄' },
 
     execute: async (bot, m, args) => {
         if (!args[0]) return await m.reply(

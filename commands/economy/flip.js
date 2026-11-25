@@ -4,7 +4,7 @@ module.exports = {
     name: 'flip',
     aliases: ['coinflip', 'cf'],
     category: 'economy',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🪙' },
     description: 'Flip a coin — bet on heads or tails. Usage: .flip <heads/tails> <amount>',
 
     async execute(bot, m, args) {

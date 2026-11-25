@@ -9,7 +9,7 @@ module.exports = {
     name: 'demoteall',
     aliases: [],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '⏬' },
     description: 'Demote every admin except the group creator, the bot owner and the bot.',
     adminOnly: true,
     groupOnly: true,

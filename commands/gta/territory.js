@@ -9,7 +9,7 @@ module.exports = {
     name: 'territory',
     aliases: ['turf', 'hood', 'map'],
     category: 'gta',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🅑' },
     description: 'View and attack territories',
 
     async execute(bot, m, args) {

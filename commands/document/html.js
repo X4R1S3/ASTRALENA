@@ -12,7 +12,7 @@ module.exports = {
     name: 'html',
     aliases: ['tohtml', 'text2html', 'webpage'],
     category: 'documents',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🎰' },
     description: 'Convert text to a simple .html document.',
 
     async execute(bot, m, args) {

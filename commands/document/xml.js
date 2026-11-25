@@ -12,7 +12,7 @@ module.exports = {
     name: 'xml',
     aliases: ['xmlgen', 'xmlfile'],
     category: 'documents',
-    reactions: { start: '📄' },
+    reactions: { start: '🗂️' },
     description: 'Generate an XML file from key:value pairs or raw XML.',
 
     async execute(bot, m, args) {

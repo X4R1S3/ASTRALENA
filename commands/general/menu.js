@@ -14,7 +14,7 @@ module.exports = {
     name: 'menu',
     aliases: ['help', 'cmds', 'list'],
     category: 'general',
-    reactions: { start: '⚙️' },
+    reactions: { start: '📚' },
     description: 'Show all commands with ASTRALENA UI (.menu <category> for one category)',
 
     async execute(bot, m, args) {

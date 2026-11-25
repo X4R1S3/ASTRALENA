@@ -7,7 +7,7 @@ module.exports = {
     name: 'remini',
     aliases: ['upscale', 'hd'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅚' },
     description: 'Enlarge and sharpen an image (scale 2-4).',
     usage: '.hd [2|3|4] (reply to an image)',
 

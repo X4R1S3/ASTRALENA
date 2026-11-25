@@ -4,7 +4,7 @@ module.exports = {
     name: 'membertag',
     aliases: ['setmytag', 'bottag', 'memberlabel', 'setmemberlabel'],
     category: 'owner',
-    reactions: { start: '🏷️' },
+    reactions: { start: '📫' },
     description: "Set the bot's own member tag/label in this group (max 30 chars).",
     groupOnly: true,
     ownerOnly: true,

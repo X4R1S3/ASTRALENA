@@ -7,7 +7,7 @@ module.exports = {
     name: 'antipoll',
     aliases: ['apoll', 'nopoll'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🗳️' },
     description: 'Block polls in this group',
     adminOnly: true,
     groupOnly: true,

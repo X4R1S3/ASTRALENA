@@ -4,7 +4,7 @@ module.exports = {
     name: 'botfont',
     aliases: ['fonts', 'fontlist'],
     category: 'bot',
-    reactions: { start: '🎨' },
+    reactions: { start: '✓' },
     description: 'List all available fancy text styles',
 
     async execute(bot, m) {

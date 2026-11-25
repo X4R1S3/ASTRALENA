@@ -80,7 +80,7 @@ module.exports = {
     name: 'gclinkstatus',
     aliases: ['glinkstatus', 'linkstatus'],
     category: 'general',
-    reactions: { start: '👥' },
+    reactions: { start: '♥' },
     description: "Post text, link, image, video, audio or document to a group's status feed, targeting the group via its invite link. Works from DM as long as the bot is already a member. For JID/\"all\"/clear, use .gcstatus instead.",
     groupOnly: false,
 

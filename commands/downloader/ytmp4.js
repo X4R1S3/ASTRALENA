@@ -6,7 +6,7 @@ module.exports = {
     name: 'ytmp4',
     aliases: ['ytvideo', 'ytv'],
     category: 'downloader',
-    reactions: { start: '📥' },
+    reactions: { start: '💵' },
     description: 'Download a YouTube video (up to 10 min by default).',
     usage: '.ytmp4 <url> [720p|480p|best]',
 

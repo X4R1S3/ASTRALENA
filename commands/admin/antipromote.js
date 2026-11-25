@@ -7,7 +7,7 @@ module.exports = {
     name: 'antipromote',
     aliases: ['apromote'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '⬆️' },
     description: 'Undo promotions made by anyone except the owner/mods/bot',
     adminOnly: true,
     groupOnly: true,

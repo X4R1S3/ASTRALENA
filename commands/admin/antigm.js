@@ -16,7 +16,7 @@ module.exports = {
     name: 'antigm',
     aliases: ['antigroupmention', 'antistatusmentiongroup'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📣' },
     description: 'Configure anti-group-mention: stop members from mentioning this group in their status',
     adminOnly: true,
     groupOnly: true,

@@ -3,7 +3,7 @@ const { applyMode, isModeEnabled, setModeEnabled } = require('../../lib/advanced
 module.exports = {
     name: 'low',
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🐢' },
     description: 'Advanced group protection — LOW: every anti-system deletes only. .low on/off toggles it for this group.',
     adminOnly: true,
     groupOnly: true,

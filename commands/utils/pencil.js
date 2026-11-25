@@ -6,7 +6,7 @@ module.exports = {
     alias: ['sketch', 'pencil', 'draw'],
     desc: 'Convert image to pencil sketch',
     category: 'utils',
-    reactions: { start: '📝' },
+    reactions: { start: '🏷' },
 
     execute: async (sock, m, { reply }) => {
         if (!m.quoted || !m.quoted.mtype?.includes('image')) {

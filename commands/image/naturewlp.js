@@ -60,7 +60,7 @@ module.exports = {
     name: 'naturewlp',
     aliases: ['wallpaper', 'wlp'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🌿' },
     description: 'Send a set of HD wallpapers as an album (default: nature).',
     usage: '.naturewlp [topic]',
 

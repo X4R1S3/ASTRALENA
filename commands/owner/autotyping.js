@@ -4,7 +4,7 @@ module.exports = {
     name: 'autotyping',
     aliases: ['typing', 'autotype'],
     category: 'owner',
-    reactions: { start: '⌨️' },
+    reactions: { start: '🟡' },
     ownerOnly: true,
     description: 'Toggle automatic typing presence',
 

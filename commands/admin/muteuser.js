@@ -10,7 +10,7 @@ const {
 } = require('../../lib/mute-core');
 
 module.exports = {
-    name: 'muteuser', aliases: ['mute -u'], category: 'admin', reactions: { start: '🛡️' },
+    name: 'muteuser', aliases: ['mute -u'], category: 'admin', reactions: { start: '🤐' },
     description: 'Mute a user. .muteuser @user 1h  OR  .muteuser @user after 2h (delayed)',
     adminOnly: true, groupOnly: true,
 

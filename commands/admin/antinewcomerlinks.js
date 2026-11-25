@@ -7,7 +7,7 @@ module.exports = {
     name: 'antinewcomerlinks',
     aliases: ['anl','newcomerlinks'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🛬' },
     description: 'Block links from members who just joined',
     adminOnly: true,
     groupOnly: true,

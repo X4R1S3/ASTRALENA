@@ -7,7 +7,7 @@ module.exports = {
     name: 'antilocation',
     aliases: ['aloc', 'nolocation'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📍' },
     description: 'Block location shares in this group',
     adminOnly: true,
     groupOnly: true,

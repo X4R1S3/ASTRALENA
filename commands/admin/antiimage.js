@@ -7,7 +7,7 @@ module.exports = {
     name: 'antiimage',
     aliases: ['aimg', 'noimage'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🖼️' },
     description: 'Block images in this group',
     adminOnly: true,
     groupOnly: true,

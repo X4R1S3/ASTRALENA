@@ -6,7 +6,7 @@ module.exports = {
     name: 'yt',
     aliases: ['youtube', 'ytdl', 'youtubedownload'],
     category: 'downloader',
-    reactions: { start: '📥' },
+    reactions: { start: '☁' },
     description: 'Download a YouTube video.',
     usage: '.yt <url> [720p|480p|best]',
 

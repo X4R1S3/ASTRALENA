@@ -35,7 +35,7 @@ module.exports = {
     name: 'diary',
     aliases: ['journal', 'mydiary', 'dnote'],
     category: 'documents',
-    reactions: { start: '⚙️' },
+    reactions: { start: '📔' },
     description: 'Write and read encrypted diary entries.',
 
     async execute(bot, m, args) {

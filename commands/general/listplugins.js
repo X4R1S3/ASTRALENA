@@ -4,7 +4,7 @@ module.exports = {
     name: 'listplugins',
     aliases: ['plugins', 'pluginlist'],
     category: 'general',
-    reactions: { start: '📝' },
+    reactions: { start: '🄴' },
     description: 'Show all installed plugins',
     usage: '.listplugins',
 

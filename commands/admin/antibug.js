@@ -10,7 +10,7 @@ module.exports = {
     name: 'antibug',
     aliases: ['abug', 'antycrash', 'anticrash'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🐞' },
     description: 'Block anyone who sends crash/lag bug payloads (action: block)',
 
     async execute(bot, m, args) {

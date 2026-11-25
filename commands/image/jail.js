@@ -7,7 +7,7 @@ module.exports = {
     name: 'jail',
     aliases: [],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅘' },
     description: 'Put the replied user or picture behind bars.',
     usage: '.jail (reply to a user or a photo)',
 

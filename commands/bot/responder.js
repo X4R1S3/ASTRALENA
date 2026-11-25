@@ -4,7 +4,7 @@ module.exports = {
     alias: ['cdx!', 'astralenaai!', 'cdxai'],
     description: 'Direct ASTRALENA AI signature message',
     category: 'Bot',
-    reactions: { start: '⚙️' },
+    reactions: { start: '👋' },
 
     async execute(bot, m, args) {
         try {

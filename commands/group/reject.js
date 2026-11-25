@@ -16,7 +16,7 @@ module.exports = {
     name: 'reject',
     aliases: ['rejectall', 'denyall'],
     category: 'group',
-    reactions: { start: '⚙️' },
+    reactions: { start: '♓' },
     description: 'Reject all pending group join requests, .reject <number> for just one, or .reject <count> (e.g. .reject 20) for the first N pending.',
     groupOnly: true,
     adminOnly: true,

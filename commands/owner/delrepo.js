@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
     name: 'delrepo',
     category: 'owner',
-    reactions: { start: '🗑️' },
+    reactions: { start: '🏏' },
     description: 'Delete a GitHub repository under your configured GitHub account. Requires GITHUB_TOKEN and GITHUB_USERNAME env vars.',
     usage: '.delrepo <name>',
     ownerOnly: true,

@@ -17,7 +17,7 @@ module.exports = {
     aliases: ['sticker2gif', 'stktogif'],
     category: 'Media',
     description: 'Convert sticker to GIF with watermark',
-    reactions: { start: '⏳' }, // <-- Right here at the top!
+    reactions: { start: '🎞️' }, // <-- Right here at the top!
 
     async execute(bot, m, args) {
         try {

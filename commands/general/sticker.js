@@ -5,7 +5,7 @@ module.exports = {
     name: 'sticker',
     aliases: ['s'],
     category: 'general',
-    reactions: { start: '🖼️' },
+    reactions: { start: '🄻' },
     description: 'Convert image/video/GIF to sticker',
 
     async execute(bot, m, args) {

@@ -3,7 +3,7 @@ const { applyMode, isModeEnabled, setModeEnabled } = require('../../lib/advanced
 module.exports = {
     name: 'smart',
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🧠' },
     description: 'Advanced group protection — SMART: every anti-system warns up to N times before kicking. .smart on/off toggles it, .smart warn [1-3] sets N.',
     adminOnly: true,
     groupOnly: true,

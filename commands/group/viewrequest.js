@@ -4,7 +4,7 @@ module.exports = {
     name: 'viewrequest',
     aliases: ['requests', 'listrequests', 'pendingrequests'],
     category: 'group',
-    reactions: { start: '📋' },
+    reactions: { start: '🅓' },
     description: 'List pending group join requests as tags (not raw LID numbers).',
     groupOnly: true,
     adminOnly: true,

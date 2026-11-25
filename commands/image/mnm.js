@@ -7,7 +7,7 @@ module.exports = {
     name: 'mnm',
     aliases: [],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅙' },
     description: 'Turn the replied user or picture into an M&M candy mosaic.',
     usage: '.mnm (reply to a user or a photo)',
 

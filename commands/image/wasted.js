@@ -7,7 +7,7 @@ module.exports = {
     name: 'wasted',
     aliases: ['gtawasted', 'dead'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '💥' },
     description: 'Add the GTA "WASTED" death screen to the replied user or picture.',
     usage: '.wasted (reply to a user or a photo)',
 

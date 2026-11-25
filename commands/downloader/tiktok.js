@@ -6,7 +6,7 @@ module.exports = {
     name: 'tiktok',
     aliases: ['tt', 'tiktokdl', 'ttdl'],
     category: 'downloader',
-    reactions: { start: '📥' },
+    reactions: { start: '🎵' },
     description: 'Download a TikTok video without watermark (add "mp3" for audio only).',
     usage: '.tt <url> [mp3]',
 

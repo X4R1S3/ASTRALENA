@@ -5,7 +5,7 @@ module.exports = {
   aliases: ['statusreact', 'autoreactonstatus'],
   category: 'owner',
   ownerOnly: true,
-  reactions: { start: '💚' },
+  reactions: { start: '🕒' },
   description: 'Automatically react to WhatsApp statuses',
   async execute(bot, m, args) {
     const action = String(args[0] || '').toLowerCase();

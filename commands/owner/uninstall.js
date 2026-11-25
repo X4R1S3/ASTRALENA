@@ -4,7 +4,7 @@ module.exports = {
     name: 'uninstall',
     aliases: ['remove', 'removeplugin', 'uninstallplugin', 'delplugin'],
     category: 'owner',
-    reactions: { start: '🔐' },
+    reactions: { start: '❑' },
     description: 'Remove an installed external command plugin',
     ownerOnly: true,
 

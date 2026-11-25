@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['check'],
     category: 'owner',
     description: 'Display bot statistics as a poll result. Owner only.',
-    reactions: { start: '📊' },
+    reactions: { start: '💀' },
     ownerOnly: true,
 
     async execute(bot, m, args) {

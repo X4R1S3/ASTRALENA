@@ -20,7 +20,7 @@ module.exports = {
   description: 'Guess the original word from scrambled letters',
   category: 'Games',
   usage: 'anagram',
-  reactions: { start: '🔤', success: '🔖' },
+  reactions: { start: '🆂', success: '🔖' },
 
   async execute(sock, m, { reply }) {
     const answer = WORDS[Math.floor(Math.random() * WORDS.length)];

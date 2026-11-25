@@ -25,7 +25,7 @@ module.exports = {
     name: 'unban',
     aliases: ['unbanuser'],
     category: 'owner',
-    reactions: { start: '✅' },
+    reactions: { start: '🐣' },
     ownerOnly: true,
     description: 'Unban a user so the bot answers them again — .unban @user | .unban @user after 2h | .unban all',
 

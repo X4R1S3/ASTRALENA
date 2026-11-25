@@ -21,7 +21,7 @@ module.exports = {
     alias: ['ab'],
     desc: 'Block bot accounts from the group',
     category: 'Admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🤖' },
     groupOnly: true,
     adminOnly: true,
 

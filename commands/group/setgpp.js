@@ -5,7 +5,7 @@ module.exports = {
     name: 'setgpp',
     aliases: ['setgrouppp', 'setppgroup', 'setpfp'],
     category: 'group',
-    reactions: { start: '📸' },
+    reactions: { start: '⚐' },
     description: 'Set the group profile picture (reply to an image).',
     groupOnly: true,
     adminOnly: true,

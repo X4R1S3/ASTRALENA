@@ -13,7 +13,7 @@ module.exports = {
     name: 'zip',
     aliases: ['tozip', 'archive'],
     category: 'documents',
-    reactions: { start: '📄' },
+    reactions: { start: '🗜️' },
     description: 'Build a .zip archive by queuing files one by one.',
 
     async execute(bot, m, args) {

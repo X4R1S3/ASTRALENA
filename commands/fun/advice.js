@@ -12,7 +12,7 @@ module.exports = {
   description: 'Get a random piece of advice',
   category: 'Fun',
   usage: 'advice',
-  reactions: { start: '💡', success: '✨', error: '❔' },
+  reactions: { start: '🎭', success: '✨', error: '❔' },
 
   async execute(sock, m, { reply }) {
     let text;

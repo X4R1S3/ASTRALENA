@@ -25,7 +25,7 @@ module.exports = {
   description: 'Ask the Magic 8-Ball a question',
   category: 'Games',
   usage: '8ball <question>',
-  reactions: { start: '🎱', success: '🎭' },
+  reactions: { start: '🆀', success: '🎭' },
 
   async execute(sock, m, { args, reply, prefix }) {
     const question = args.join(' ').trim();

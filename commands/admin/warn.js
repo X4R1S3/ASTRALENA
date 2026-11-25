@@ -25,7 +25,7 @@ module.exports = {
     name: 'warn',
     aliases: ['w'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '⚠️' },
     description: 'Warn a user. Tag or reply to their message. .warn @user <reason>',
     adminOnly: true,
     groupOnly: true,

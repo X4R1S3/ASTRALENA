@@ -8,7 +8,7 @@ module.exports = {
     name: 'antisticker',
     aliases: ['ast', 'nosticker'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🏷️' },
     description: 'Block ALL stickers in this group (use mutesticker to ban one specific sticker)',
     adminOnly: true,
     groupOnly: true,

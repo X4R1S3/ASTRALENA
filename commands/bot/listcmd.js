@@ -8,7 +8,7 @@ module.exports = {
     name: 'listcmd',
     aliases: ['stickerlist'],
     category: 'bot',
-    reactions: { start: '📝' },
+    reactions: { start: '💚' },
     description: 'List all sticker-linked commands',
 
     async execute(bot, m, args) {

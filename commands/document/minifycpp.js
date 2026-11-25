@@ -12,7 +12,7 @@ module.exports = {
     name: 'comcpp',
     aliases: ['comc++', 'compresscpp', 'minifycpp'],
     category: 'tools',
-    reactions: { start: '📸' },
+    reactions: { start: '🧹' },
     description: 'Create a C++ file from raw code (reply to a .cpp document or text message).',
 
     async execute(bot, m, args) {

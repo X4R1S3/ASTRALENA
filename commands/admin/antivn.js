@@ -7,7 +7,7 @@ module.exports = {
     name: 'antivn',
     aliases: ['avn', 'novn'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🎙️' },
     description: 'Delete voice notes in this group (delete / warn / kick)',
     adminOnly: true,
     groupOnly: true,

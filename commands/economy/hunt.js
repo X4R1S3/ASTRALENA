@@ -14,7 +14,7 @@ module.exports = {
     name: 'hunt',
     aliases: ['hunting'],
     category: 'economy',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🏹' },
     description: 'Go hunting for coins (5 min cooldown)',
 
     async execute(bot, m, args) {

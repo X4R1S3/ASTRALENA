@@ -4,7 +4,7 @@ module.exports = {
     name: 'autorecording',
     aliases: ['recording', 'autorecord'],
     category: 'owner',
-    reactions: { start: '🎙️' },
+    reactions: { start: '🟣' },
     ownerOnly: true,
     description: 'Toggle automatic recording presence',
 

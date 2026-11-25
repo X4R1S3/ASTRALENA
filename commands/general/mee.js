@@ -2,7 +2,7 @@ module.exports = {
     name: 'mee',
     aliases: ['mywa'],
     category: 'general',
-    reactions: { start: '🔗' },
+    reactions: { start: '🄵' },
     description: 'Get your own wa.me link.',
 
     async execute(bot, m) {

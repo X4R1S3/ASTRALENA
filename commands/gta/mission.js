@@ -19,7 +19,7 @@ module.exports = {
     name: 'mission',
     aliases: ['missions', 'task', 'job'],
     category: 'gta',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🅐' },
     description: 'Run missions for GTA characters',
 
     async execute(bot, m, args) {

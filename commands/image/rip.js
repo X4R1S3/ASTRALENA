@@ -7,7 +7,7 @@ module.exports = {
     name: 'rip',
     aliases: ['rip-meme'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅛' },
     description: 'Put the replied user or picture on a tombstone.',
     usage: '.rip (reply to a user or a photo)',
 

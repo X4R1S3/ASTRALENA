@@ -2,7 +2,7 @@ module.exports = {
     name: 'getjids',
     aliases: ['jids'],
     category: 'group',
-    reactions: { start: '🪪' },
+    reactions: { start: '🅈' },
     description: 'List all member JIDs in the current group.',
     groupOnly: true,
     adminOnly: true,

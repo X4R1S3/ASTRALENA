@@ -4,7 +4,7 @@ module.exports = {
     name: 'tagall',
     aliases: ['tag'],
     category: 'group',
-    reactions: { start: '👥' },
+    reactions: { start: '🅞' },
     description: 'List and tag every member in the group.',
     usage: '.tagall [message]  (or reply to a message)',
     groupOnly: true,

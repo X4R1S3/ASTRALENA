@@ -7,7 +7,7 @@ module.exports = {
     name: 'antidoc',
     aliases: ['antidocument', 'adoc', 'nodoc'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📄' },
     description: 'Block documents in this group',
     adminOnly: true,
     groupOnly: true,

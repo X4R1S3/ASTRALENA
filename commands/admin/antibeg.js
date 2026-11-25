@@ -8,7 +8,7 @@ module.exports = {
     name: 'antibeg',
     aliases: ['ab2', 'antibegging'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🙏' },
     description: 'Configure anti-begging protection (please/help/give/money/data solicitation)',
     adminOnly: true,
     groupOnly: true,

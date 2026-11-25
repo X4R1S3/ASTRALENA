@@ -19,7 +19,7 @@ module.exports = {
     aliases: [],
     category: 'owner',
     ownerOnly: true,
-    reactions: { start: '📝' },
+    reactions: { start: '🕵' },
     description: 'Reply to a sticker to link it to a command',
 
     async execute(bot, m, args) {

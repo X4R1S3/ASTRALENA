@@ -6,7 +6,7 @@ module.exports = {
   name: 'mutestickeruser',
   aliases: ['sticker-mute', 'stickeronlymute'],
   category: 'admin',
-  reactions: { start: '🖼️' },
+  reactions: { start: '🪡' },
   description: 'Block all stickers from one member while allowing their other messages.',
   adminOnly: true,
   groupOnly: true,

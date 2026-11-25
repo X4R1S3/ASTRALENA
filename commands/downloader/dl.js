@@ -6,7 +6,7 @@ module.exports = {
     name: 'dl',
     aliases: ['download', 'sdl', 'social', 'getmedia'],
     category: 'downloader',
-    reactions: { start: '📥' },
+    reactions: { start: '🟢' },
     description: 'Download from any supported platform: YouTube, TikTok, Facebook, Instagram, Twitter/X, Pinterest, CapCut.',
     usage: '.dl <link> [mp3] [720p|480p|best]',
 

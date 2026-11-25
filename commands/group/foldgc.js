@@ -74,7 +74,7 @@ module.exports = {
     name: 'foldgc',
     aliases: ['foldgroup', 'delgc', 'deletegc', 'dgc'],
     category: 'group',
-    reactions: { start: '👥' },
+    reactions: { start: '🅅' },
     description: 'Remove every single person from the group, including the bot. Asks for a "yes" first. Irreversible.',
     groupOnly: true,
     ownerOnly: true,

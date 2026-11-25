@@ -7,7 +7,7 @@ module.exports = {
     name: 'invert',
     aliases: ['negative'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '◐' },
     description: 'Invert the colors of the replied user or picture.',
     usage: '.invert (reply to a user or a photo)',
 

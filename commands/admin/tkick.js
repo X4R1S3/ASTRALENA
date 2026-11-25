@@ -17,7 +17,7 @@ module.exports = {
     name: 'tkick',
     aliases: ['tempkick', 'timedkick'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '⏱️' },
     description: 'Kick a user and automatically add them back after a time — .tkick @user 10m',
     adminOnly: true,
     groupOnly: true,

@@ -14,7 +14,7 @@ module.exports = {
     name: '$',
     aliases: [],
     category: 'owner',
-    reactions: { start: '🔐' },
+    reactions: { start: '🧪' },
     description: 'Run a JS snippet on the live bot process',
     usage: '$ <code>',
     ownerOnly: true,

@@ -15,7 +15,7 @@ module.exports = {
     name: 'warnreset',
     aliases: ['clearwarn', 'resetwarn', 'unwarn'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '♻️' },
     description: 'Clear all warnings for a user. Tag or reply to their message.',
     adminOnly: true,
     groupOnly: true,

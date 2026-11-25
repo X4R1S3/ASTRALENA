@@ -47,7 +47,7 @@ module.exports = {
     name: 'ban',
     aliases: ['banuser', 'banlist', 'bans'],
     category: 'owner',
-    reactions: { start: '🔨' },
+    reactions: { start: '🌕' },
     ownerOnly: true,
     description: 'Ban a user from using the bot (bot goes silent for them) — .ban @user | 2h | after 2h | after 2h for 1h | .ban list | .unban @user | .sch -ban @user 6pm to 9pm daily',
 

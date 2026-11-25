@@ -7,7 +7,7 @@ module.exports = {
     name: 'antiaudio',
     aliases: ['aaudio', 'noaudio'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🎧' },
     description: 'Block audio files in this group',
     adminOnly: true,
     groupOnly: true,

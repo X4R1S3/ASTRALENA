@@ -77,7 +77,7 @@ module.exports = {
     name: 'greetings',
     aliases: ['greeting', 'greet'],
     category: 'owner',
-    reactions: { start: '🌅' },
+    reactions: { start: '🦺' },
     description: 'Greet the owner (tagged) in chosen groups every morning, afternoon, evening and night (timezone aware).',
     usage: '.greetings on | off | status | groups | test | name | time | tz | card',
     ownerOnly: true,

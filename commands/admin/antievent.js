@@ -7,7 +7,7 @@ module.exports = {
     name: 'antievent',
     aliases: ['aevent', 'noevent'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📅' },
     description: 'Block WhatsApp events in this group',
     adminOnly: true,
     groupOnly: true,

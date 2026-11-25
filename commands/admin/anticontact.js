@@ -7,7 +7,7 @@ module.exports = {
     name: 'anticontact',
     aliases: ['acontact', 'nocontact'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '👤' },
     description: 'Block contact cards in this group',
     adminOnly: true,
     groupOnly: true,

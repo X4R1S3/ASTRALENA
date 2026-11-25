@@ -17,7 +17,7 @@ module.exports = {
     category: 'tools',
     description: "Clear this chat the same way WhatsApp's own Clear chat button does (bot's own view only) — .wipe",
     ownerOnly: true,
-    reactions: { start: '🧹' },
+    reactions: { start: '🛑' },
 
     async execute(bot, m) {
         try {

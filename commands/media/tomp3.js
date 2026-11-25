@@ -78,7 +78,7 @@ module.exports = {
   aliases: ['video2mp3', 'mp3', 'toaudio'],
   category: 'media',
   description: 'Convert a video or audio file to MP3',
-  reactions: { start: '🎵' },
+  reactions: { start: '🅠' },
 
   async execute(bot, m, args) {
     const found = resolveMedia(m);

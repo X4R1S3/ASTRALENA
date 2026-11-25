@@ -44,7 +44,7 @@ module.exports = {
   description: 'Guess the five-letter word in six tries',
   category: 'Games',
   usage: 'wordle [start|guess]',
-  reactions: { start: '🎮', success: '🎉', error: '😢' },
+  reactions: { start: '🟩', success: '🎉', error: '😢' },
 
   async execute(sock, m, { args, reply, prefix }) {
     if (!global.wordleGames) global.wordleGames = {};

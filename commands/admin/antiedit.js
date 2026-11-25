@@ -83,7 +83,7 @@ module.exports = {
     name: 'antiedit',
     aliases: ['editledetect', 'editedetect'],
     category: 'tools',
-    reactions: { start: '🛡️' },
+    reactions: { start: '✏️' },
     desc: 'Detect message edits and send old + new content',
 
     execute: async (sock, m, { args, reply }) => {

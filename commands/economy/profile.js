@@ -282,7 +282,7 @@ module.exports = {
     name: 'profile',
     aliases: ['eco', 'idcard', 'card', 'id'],
     category: 'economy',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🅶' },
     description: 'View your ASTRALENA identity card',
 
     async execute(bot, m, args) {

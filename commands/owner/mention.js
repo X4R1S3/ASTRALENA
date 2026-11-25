@@ -54,7 +54,7 @@ module.exports = {
     alias:     ['tagme', 'owntag'],
     desc:      'Set action when owner is mentioned in any chat',
     category: 'owner',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🔰' },
     ownerOnly: true,
 
     execute: async (sock, m, { args, reply, prefix }) => {

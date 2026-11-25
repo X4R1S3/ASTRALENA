@@ -5,7 +5,7 @@ module.exports = {
     name: 'withdraw',
     aliases: ['with', 'wd', 'withall'],
     category: 'economy',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🏧' },
     description: 'Withdraw coins from your bank. Usage: .withdraw <amount|all> (or .withall to withdraw everything)',
 
     async execute(bot, m, args, cmdName) {

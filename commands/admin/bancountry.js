@@ -9,7 +9,7 @@ module.exports = {
     name: 'bancountry',
     aliases: ['bancc', 'countryban'],
     category: 'admin',
-    reactions: { start: '🌍' },
+    reactions: { start: '🌐' },
     description: 'Ban a country code from this group — anyone joining with it is auto-kicked.\n' +
                  '.bancountry +92 — .bancountry remove +92 — .bancountry clear — .bancountry list',
     adminOnly: true,

@@ -14,7 +14,7 @@ module.exports = {
     name: 'install',
     aliases: ['installplugin', 'plugin'],
     category: 'owner',
-    reactions: { start: '🔐' },
+    reactions: { start: '🛡' },
     description: 'Install one or more external command plugins from GitHub Gist/raw links',
     usage: '.install <link> [more links...] (or reply to a message containing the link(s))',
     ownerOnly: true,

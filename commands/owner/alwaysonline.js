@@ -15,7 +15,7 @@ module.exports = {
     name: 'alwaysonline',
     aliases: ['setonline', 'online', 'offline'],
     category: 'owner',
-    reactions: { start: '⚙️' },
+    reactions: { start: '❞' },
     description: 'Toggle always-online presence for the bot',
     ownerOnly: true,
 

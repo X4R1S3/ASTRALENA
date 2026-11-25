@@ -1,7 +1,7 @@
 module.exports = {
     name: 'getprivacy',
     category: 'owner',
-    reactions: { start: '🔒' },
+    reactions: { start: '🔫' },
     description: "Show the bot account's WhatsApp privacy settings.",
     ownerOnly: true,
 

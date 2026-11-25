@@ -3,7 +3,7 @@ const { applyMode, isModeEnabled, setModeEnabled } = require('../../lib/advanced
 module.exports = {
     name: 'hyper',
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '⚡' },
     description: 'Advanced group protection — HYPER: every anti-system kicks immediately. .hyper on/off toggles it for this group.',
     adminOnly: true,
     groupOnly: true,

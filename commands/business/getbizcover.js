@@ -117,7 +117,7 @@ module.exports = {
     name: 'getbizcover',
     aliases: ['getcover', 'bizcoverget', 'coverget'],
     category: 'business',
-    reactions: { start: '🖼️' },
+    reactions: { start: '🏢' },
     description: 'Get the cover photo of a WhatsApp Business account — .getbizcover 234xxxxxxxxxx | .getbizcover @user | reply to their message. Add -p to send it to the owner DM.',
 
     extractCover,

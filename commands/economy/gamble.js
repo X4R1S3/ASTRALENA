@@ -6,7 +6,7 @@ module.exports = {
     name: 'gamble',
     aliases: ['coinflip50'],
     category: 'economy',
-    reactions: { start: '🎰' },
+    reactions: { start: '🅳' },
     description: `Gamble your coins on a 50/50 chance to double them (max ${MAX_GAMBLE}). Usage: .gamble <amount>`,
 
     async execute(bot, m, args) {

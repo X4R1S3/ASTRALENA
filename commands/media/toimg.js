@@ -106,7 +106,7 @@ module.exports = {
     aliases: ['stickertoimg', 's2i', 's2img', 'tophoto'],
     description: 'Convert a sticker back to image (or video for animated stickers)',
     category: 'media',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅟' },
 
     async execute(bot, m, args) {
         const ctx = m.message?.extendedTextMessage?.contextInfo

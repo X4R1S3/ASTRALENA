@@ -2,7 +2,7 @@ module.exports = {
     name: 'location',
     aliases: ['loc'],
     category: 'tools',
-    reactions: { start: '📍' },
+    reactions: { start: '🔥' },
     description: 'Send a location pin from latitude and longitude.',
     usage: '.location 6.5244,3.3792',
 

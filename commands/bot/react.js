@@ -4,7 +4,7 @@ module.exports = {
     name: 'react',
     aliases: ['autoreact'],
     category: 'bot',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🕐' },
     description: 'Configure auto-react',
 
     async execute(bot, m, args) {

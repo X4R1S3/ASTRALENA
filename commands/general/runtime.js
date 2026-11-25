@@ -21,7 +21,7 @@ module.exports = {
     name: 'runtime',
     aliases: ['rt', 'status'],
     category: 'general',
-    reactions: { start: '📊' },
+    reactions: { start: '🄹' },
     description: 'Show the bot runtime status — uptime, memory, process ID, time, Node version, platform',
 
     async execute(bot, m) {

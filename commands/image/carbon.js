@@ -7,7 +7,7 @@ module.exports = {
     name: 'carbon',
     aliases: ['code', 'codeimg'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅗' },
     description: 'Turn code into a syntax-highlighted screenshot.',
     usage: '.carbon <code> (or reply to a message with code)',
 

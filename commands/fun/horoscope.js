@@ -15,7 +15,7 @@ module.exports = {
   description: 'Get a daily horoscope for a zodiac sign',
   category: 'Fun',
   usage: 'horoscope <sign>',
-  reactions: { start: '⭐', success: '👽', error: '🏗️' },
+  reactions: { start: '♈', success: '👽', error: '🏗️' },
 
   async execute(sock, m, { args, reply, prefix }) {
     const sign = args[0]?.toLowerCase();

@@ -69,7 +69,7 @@ module.exports = {
     description: 'Re-send an image / video / voice note as a view-once message',
     usage:       '.tovv (reply to media)',
     category:    'media',
-    reactions:   { start: '⏳' },
+    reactions:   { start: '🅡' },
 
     async execute(bot, m, args) {
         const found = resolveMedia(m);

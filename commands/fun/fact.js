@@ -13,7 +13,7 @@ module.exports = {
   description: 'Get a random interesting fact',
   category: 'Fun',
   usage: 'fact',
-  reactions: { start: '🧠', success: '✨', error: '❔' },
+  reactions: { start: '🅾', success: '✨', error: '❔' },
 
   async execute(sock, m, { reply }) {
 

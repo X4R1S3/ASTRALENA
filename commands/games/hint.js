@@ -4,7 +4,7 @@ module.exports = {
   description: 'Reveal the answer for an active game',
   category: 'Games',
   usage: 'hint',
-  reactions: { start: '💡', success: '🎭' },
+  reactions: { start: '🆃', success: '🎭' },
 
   async execute(sock, m, { reply }) {
     let answer;

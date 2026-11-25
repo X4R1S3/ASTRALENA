@@ -3,7 +3,7 @@ module.exports = {
   aliases: ['jokes', 'tellmeajoke'],
   description: 'Get a random joke',
   category: 'Fun',
-  reactions: { start: '🤣', success: '😂' },
+  reactions: { start: '🅿', success: '😂' },
 
   async execute(sock, m, { args, reply }) {
     const categories = ['Any', 'Programming', 'Misc', 'Pun', 'Spooky', 'Christmas'];

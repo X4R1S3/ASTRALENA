@@ -81,7 +81,7 @@ module.exports = {
     name: 'gcstatus',
     aliases: ['groupstatus', 'gstatus', 'poststatus'],
     category: 'general',
-    reactions: { start: '👥' },
+    reactions: { start: '🄰' },
     description: "Post text, link, image, video, audio or document to a group's status feed. Target the current group, \"all\", or a specific group JID. Supports colors and clearing tracked statuses. For invite-link targeting, use .gclinkstatus instead.",
     groupOnly: false,
 

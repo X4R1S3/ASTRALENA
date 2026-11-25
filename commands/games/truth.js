@@ -22,7 +22,7 @@ module.exports = {
   description: 'Get a random truth question',
   category: 'Games',
   usage: 'truth',
-  reactions: { start: '😳', success: '🎭' },
+  reactions: { start: '😂', success: '🎭' },
 
   async execute(sock, m, { reply }) {
 

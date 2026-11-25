@@ -6,7 +6,7 @@ module.exports = {
     name: 'instagram',
     aliases: ['ig', 'insta', 'igdl', 'reel'],
     category: 'downloader',
-    reactions: { start: '📥' },
+    reactions: { start: '📷' },
     description: 'Download an Instagram reel, video or post (add "mp3" for audio only).',
     usage: '.ig <url> [mp3]',
 

@@ -4,7 +4,7 @@ module.exports = {
     alias: ['view', 'website', 'url'],
     desc: 'Create a website button that opens in-app',
     category: 'utils',
-    reactions: { start: '🌐' },
+    reactions: { start: '✏' },
 
     execute: async (sock, m, { args, reply, prefix }) => {
         let fullText = args.join(' ').trim();

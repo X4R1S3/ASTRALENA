@@ -8,7 +8,7 @@ module.exports = {
     name: 'restart',
     aliases: ['reboot'],
     category: 'owner',
-    reactions: { start: '🔄' },
+    reactions: { start: '🎤' },
     ownerOnly: true,
     description: 'Restart the bot',
 

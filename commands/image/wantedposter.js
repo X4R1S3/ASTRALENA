@@ -7,7 +7,7 @@ module.exports = {
     name: 'wantedposter',
     aliases: ['wantedpic', 'wantedpost'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅜' },
     description: 'Make a wanted poster of the replied user or picture.',
     usage: '.wantedposter (reply to a user or a photo)',
 

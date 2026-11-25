@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['pstatus'],
     category: 'owner',
     description: 'Show a PM2-style process status card for the bot. Owner only.',
-    reactions: { start: '✳️' },
+    reactions: { start: '💨' },
     ownerOnly: true,
 
     async execute(bot, m, args) {

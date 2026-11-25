@@ -7,7 +7,7 @@ module.exports = {
     alias: ['cartoon2', 'toon2', 'anime'],
     desc: 'Real comic book style filter',
     category: 'utils',
-    reactions: { start: '🎨' },
+    reactions: { start: '✘' },
 
     execute: async (sock, m, { reply }) => {
         if (!m.quoted || !m.quoted.mtype?.includes('image')) {

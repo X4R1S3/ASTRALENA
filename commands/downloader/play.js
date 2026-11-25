@@ -15,7 +15,7 @@ module.exports = {
     alias: ['song', 'music'],
     desc: 'Download and send YouTube music',
     category: 'downloader',
-    reactions: { start: '⏰' },
+    reactions: { start: '▶️' },
 
     execute: async (sock, m, { reply, args, prefix }) => {
         const query = args.join(' ').trim();

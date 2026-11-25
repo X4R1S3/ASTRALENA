@@ -13,7 +13,7 @@ module.exports = {
     name: 'gpreview',
     aliases: ['greetpreview', 'gprev'],
     category: 'owner',
-    reactions: { start: '🔎' },
+    reactions: { start: '👕' },
     description: 'Preview a greeting card (morning, afternoon, evening or night). Works in DM and in groups.',
     usage: '.gpreview <morning|afternoon|evening|night|all> [line number]',
     ownerOnly: true,

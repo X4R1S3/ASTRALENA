@@ -8,7 +8,7 @@ module.exports = {
     name: 'modlog',
     aliases: ['modlogs'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📜' },
     description: 'Keep a log of every anti-system action in this group',
     adminOnly: true,
     groupOnly: true,

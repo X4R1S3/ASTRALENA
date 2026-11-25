@@ -13,7 +13,7 @@ module.exports = {
   category: 'Games',
   description: 'Play a fruit slot machine game.',
   usage: 'slot | slot bet | slot balance | slot reset',
-  reactions: { start: '🎰', success: '✨' },
+  reactions: { start: '🆄', success: '✨' },
 
   async execute(sock, m, { args, reply }) {
     const action = String(args[0] || '').toLowerCase();

@@ -9,7 +9,7 @@ module.exports = {
     name: 'antiscam',
     aliases: ['as'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🕵️' },
     description: 'Configure anti-scam/fraud-message protection',
     adminOnly: true,
     groupOnly: true,

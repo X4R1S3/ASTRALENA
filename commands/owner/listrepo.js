@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
     name: 'listrepo',
     category: 'owner',
-    reactions: { start: '📋' },
+    reactions: { start: '⚔' },
     description: 'List repositories under your configured GitHub account. Requires GITHUB_TOKEN env var.',
     ownerOnly: true,
 

@@ -2,7 +2,7 @@ module.exports = {
     name: 'groupinfoinvite',
     aliases: ['inviteinfo', 'checkinvite'],
     category: 'group',
-    reactions: { start: '🔍' },
+    reactions: { start: '✉️' },
     description: 'Preview a group\'s info from its invite code/link without joining.',
     usage: '.groupinfoinvite <invite code or link>',
 

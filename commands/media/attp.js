@@ -68,7 +68,7 @@ module.exports = {
     aliases: ['animatedttp', 'text2gif', 'sticker'],
     description: 'Create an animated text sticker',
     category: 'media',
-    reactions: { start: '🔮' },
+    reactions: { start: '🅝' },
 
     async execute(bot, m, args) {
         try {

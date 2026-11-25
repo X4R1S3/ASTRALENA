@@ -2,7 +2,7 @@ module.exports = {
     name: 'approval',
     aliases: ['adminapproval', 'joinapproval', 'memberapproval'],
     category: 'group',
-    reactions: { start: '🛂' },
+    reactions: { start: '🅁' },
     description: 'Turn admin approval for new members on/off in this group, or check its status.',
     groupOnly: true,
     adminOnly: true,

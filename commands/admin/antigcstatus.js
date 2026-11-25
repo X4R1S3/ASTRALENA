@@ -31,7 +31,7 @@ module.exports = {
     aliases: ['nogcstatus', 'blockgcstatus', 'agcs'],
     description: 'Prevent members from posting to the group status feed',
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📊' },
     groupOnly: true,
     adminOnly: true,
 

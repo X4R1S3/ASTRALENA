@@ -19,7 +19,7 @@ module.exports = {
     name: 'antidelete',
     aliases: ['deletedetect'],
     category: 'tools',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🗑️' },
     desc: 'Resend deleted messages (text + media) to your DM or back to the same chat',
 
     execute: async (sock, m, { args, reply }) => {

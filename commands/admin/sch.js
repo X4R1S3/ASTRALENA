@@ -22,7 +22,7 @@ module.exports = {
     name: 'sch',
     aliases: ['schedule', 'sched'],
     category: 'admin',
-    reactions: { start: '⚙️' },
+    reactions: { start: '⏰' },
     description: 'Set a daily recurring mute/unmute schedule',
     adminOnly: true,
     groupOnly: true,

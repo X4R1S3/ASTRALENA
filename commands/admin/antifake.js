@@ -18,7 +18,7 @@ module.exports = {
     name: 'antifake',
     aliases: ['af2', 'fakenumber'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🪪' },
     description: 'Kick/warn members who join with an unrecognized/fake phone number',
     adminOnly: true,
     groupOnly: true,

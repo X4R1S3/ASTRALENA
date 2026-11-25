@@ -2,7 +2,7 @@ module.exports = {
     name: 'allgroups',
     aliases: ['listgroups'],
     category: 'owner',
-    reactions: { start: '📚' },
+    reactions: { start: '❝' },
     description: 'List every group the bot is currently in.',
     ownerOnly: true,
 

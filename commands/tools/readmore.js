@@ -4,7 +4,7 @@ module.exports = {
     name: 'readmore',
     aliases: ['rmore'],
     category: 'tools',
-    reactions: { start: '📖' },
+    reactions: { start: '🚫' },
     description: 'Create a WhatsApp "Read more" message that hides part of the text.',
     usage: '.readmore visible text | hidden text',
 

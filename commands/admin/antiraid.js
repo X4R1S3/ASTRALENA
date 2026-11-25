@@ -6,7 +6,7 @@ module.exports = {
     name: 'antiraid',
     aliases: ['raid'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🚨' },
     description: 'Detect mass-joins and remove the raiders',
     adminOnly: true,
     groupOnly: true,

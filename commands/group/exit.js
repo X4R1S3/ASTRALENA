@@ -2,7 +2,7 @@ module.exports = {
     name: 'exit',
     aliases: ['leavegc'],
     category: 'group',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🚪' },
     description: 'Leave the current group.',
     groupOnly: true,
     ownerOnly: true,

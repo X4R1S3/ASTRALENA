@@ -15,7 +15,7 @@ module.exports = {
     name:      'metasecure',
     alias:     ['setsecure', 'secureservice', 'metaservice'],
     category: 'owner',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🔐' },
     desc:      'Toggle the "secure service from Meta" label on all bot messages (always ON by default, like aibadge)',
     ownerOnly: true,
 

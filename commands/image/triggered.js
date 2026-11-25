@@ -7,7 +7,7 @@ module.exports = {
     name: 'triggered',
     aliases: ['trigger', 'trigger-meme'],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '😤' },
     description: 'Create an animated TRIGGERED meme of the replied user or picture.',
     usage: '.triggered (reply to a user or a photo)',
 

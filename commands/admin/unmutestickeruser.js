@@ -6,7 +6,7 @@ module.exports = {
   name: 'unmutestickeruser',
   aliases: ['unsticker-mute', 'stickeronlyunmute'],
   category: 'admin',
-  reactions: { start: '🖼️' },
+  reactions: { start: '🧴' },
   description: 'Allow a member to send stickers again.',
   adminOnly: true,
   groupOnly: true,

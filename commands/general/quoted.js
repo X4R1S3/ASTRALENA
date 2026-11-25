@@ -5,7 +5,7 @@ module.exports = {
     name: 'quoted',
     aliases: ['q', 'getquoted', 'quote'],
     category: 'general',
-    reactions: { start: '⚙️' },
+    reactions: { start: '🄸' },
     description: 'Extract a replied text or media message',
 
     async execute(sock, m, { args, reply }) {

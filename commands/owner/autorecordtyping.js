@@ -4,7 +4,7 @@ module.exports = {
     name: 'autorecordtyping',
     aliases: ['recordtyping', 'art'],
     category: 'owner',
-    reactions: { start: '🎙️' },
+    reactions: { start: '⌨️' },
     ownerOnly: true,
     description: 'Toggle automatic recording then typing presence',
 

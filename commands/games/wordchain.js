@@ -217,7 +217,7 @@ module.exports = {
     description: 'Play a timed multiplayer word chain game',
     category: 'games',
     groupOnly: true,
-    reactions: { start: '🎮', success: '🔗', error: '⚠️' },
+    reactions: { start: '🆅', success: '🔗', error: '⚠️' },
 
     async execute(sock, message, { reply, args, prefix = '.' }, commandName) {
         const chatId = message.chat;

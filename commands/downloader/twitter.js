@@ -6,7 +6,7 @@ module.exports = {
     name: 'twitter',
     aliases: ['xdl', 'twdl', 'tw'],
     category: 'downloader',
-    reactions: { start: '📥' },
+    reactions: { start: '🐦' },
     description: 'Download Twitter/X videos and images.',
     usage: '.tw <tweet url>',
 

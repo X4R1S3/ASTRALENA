@@ -4,7 +4,7 @@ module.exports = {
     alias: ['syntaxhelp', 'languages'],
     desc: 'Show supported languages for syntax highlighting',
     category: 'utils',
-    reactions: { start: '📚' },
+    reactions: { start: '⚉' },
     
     execute: async (sock, m, { reply, prefix }) => {
         try {

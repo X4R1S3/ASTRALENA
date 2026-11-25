@@ -7,7 +7,7 @@ module.exports = {
     name: 'rainbow',
     aliases: [],
     category: 'image',
-    reactions: { start: '⏳' },
+    reactions: { start: '🌈' },
     description: 'Apply a rainbow filter to the replied user or picture.',
     usage: '.rainbow (reply to a user or a photo)',
 

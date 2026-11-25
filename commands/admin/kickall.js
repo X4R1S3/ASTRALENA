@@ -10,7 +10,7 @@ module.exports = {
     name: 'kickall',
     aliases: [],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '🥾' },
     description: 'Kick everyone except the bot and its owner.',
     adminOnly: true,
     groupOnly: true,

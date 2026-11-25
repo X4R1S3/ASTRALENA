@@ -13,7 +13,7 @@ module.exports = {
     name: 'warns',
     aliases: ['checkwarn', 'warnlist'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '📋' },
     description: 'Check warnings for a user. Tag or reply to their message.',
     adminOnly: true,
     groupOnly: true,

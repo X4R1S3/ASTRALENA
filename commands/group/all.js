@@ -5,7 +5,7 @@ module.exports = {
     name: 'all',
     aliases: [],
     category: 'group',
-    reactions: { start: '👥' },
+    reactions: { start: '🅀' },
     description: 'Tag everyone in the group like @all.',
     usage: '.all',
     groupOnly: true,

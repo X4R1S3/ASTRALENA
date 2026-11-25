@@ -7,7 +7,7 @@ module.exports = {
     name: 'antivv',
     aliases: ['avv', 'novv'],
     category: 'admin',
-    reactions: { start: '🛡️' },
+    reactions: { start: '👁️' },
     description: 'Delete view-once messages in this group (delete / warn / kick)',
     adminOnly: true,
     groupOnly: true,

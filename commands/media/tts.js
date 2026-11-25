@@ -137,7 +137,7 @@ module.exports = {
     aliases: ['say', 'voice', 'speak'],
     description: 'Convert text to speech — 234 voices across ~60 languages',
     category: 'media',
-    reactions: { start: '⏳' },
+    reactions: { start: '🅢' },
 
     async execute(bot, m, args) {
         if (!args.length) {

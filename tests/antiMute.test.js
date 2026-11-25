@@ -374,5 +374,47 @@ function windowAround(minutesBefore, minutesAfter) {
     assert.strictEqual(calls.sent.length, before);
   });
 
+  await check('antiraid mute -g stores finite and indefinite group lockdown settings', async () => {
+    const cmd = require(path.join(root, 'commands', 'admin', 'antiraid.js'));
+    const { bot } = mkBot();
+    let t = cmdMsg(GROUP);
+    await cmd.execute(bot, t.m, argv(bot, t.m, ['mute', '-g', '10m']));
+    assert.deepStrictEqual(readDb('antiraid')[GROUP].muteGroup, { ms: 600000 });
+    t = cmdMsg(GROUP);
+    await cmd.execute(bot, t.m, argv(bot, t.m, ['mute', '-g']));
+    assert.deepStrictEqual(readDb('antiraid')[GROUP].muteGroup, { ms: null });
+  });
+  await check('an Anti-Raid group mute locks the group and schedules finite reopening', async () => {
+    writeDb('antiraid', { [GROUP]: { enabled: true, count: 3, minutes: 10, muteGroup: { ms: 600000 } } });
+    fs.rmSync('./database/muteSchedules.json', { force: true });
+    const { bot, calls } = mkBot();
+    const locked = [];
+    bot.sock.groupSettingUpdate = async (group, setting) => locked.push([group, setting]);
+    await bot.antiSystems.checkGroupJoin(GROUP, ['2341000001@s.whatsapp.net', '2341000002@s.whatsapp.net', '2341000003@s.whatsapp.net']);
+    assert.deepStrictEqual(locked, [[GROUP, 'announcement']]);
+    assert.match(calls.sent.at(-1).text, /The group is muted for 10m/);
+    const jobs = Object.values(readDb('muteSchedules'));
+    assert.ok(jobs.some((job) => job.type === 'unmuteGroup' && job.chat === GROUP));
+  });
+  await check('Anti-Raid daily mute creates one recurring window and replaces/removes it cleanly', async () => {
+    const cmd = require(path.join(root, 'commands', 'admin', 'antiraid.js'));
+    const mc = require(path.join(root, 'lib', 'mute-core.js'));
+    const mine = () => mc.listRecurring(GROUP).filter((r) => r.mutedBy === 'anti-raid');
+    const run = async (...list) => {
+      const t = cmdMsg(GROUP);
+      await cmd.execute(mkBot().bot, t.m, argv(mkBot().bot, t.m, list));
+      return t.replies.join('\n');
+    };
+    assert.match(await run('mute', '-g', '5am', 'to', '6am', 'daily'), /05:00.*06:00/);
+    assert.strictEqual(mine().length, 1);
+    assert.strictEqual(mine()[0].type, 'sch-muteGroup');
+    assert.match(await run(), /Daily mute: 05:00 to 06:00/);
+    await run('mute', '-g', '10m');
+    assert.strictEqual(mine().length, 0);
+    await run('mute', '-g', '5am', 'to', '6am');
+    assert.match(await run('mute', '-g', 'off'), /daily mute window was removed/);
+    assert.strictEqual(mine().length, 0);
+  });
+
   console.log(`\n${passed} anti-mute tests passed.`);
 })();
